@@ -1,0 +1,30 @@
+body {
+  font-family: 'Muli', sans-serif !important;
+  font-weight: 400;
+}
+
+// Below code is for sticky footer
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+.has-text-grey-dark {
+  color: #4a4a4a !important;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 1.5em 0.5em;
+  }
+
+  .card-content {
+    padding: 1.5em;
+  }
+}
+// end sticky footer code
