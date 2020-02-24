@@ -9,8 +9,9 @@
         {{ $static.metadata.siteName }}
       </h1>
 
-      <p class="subtitle is-6 has-text-grey-dark">
-        Software Engineer
+      <p class="subtitle is-6 has-text-grey-dark has-text-weight-medium">
+        <strong>Software Engineer</strong><br/>
+        Staunton, VA
       </p>
 
       <p class="subtitle is-7 has-text-grey-dark">

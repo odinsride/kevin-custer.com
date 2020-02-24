@@ -30,7 +30,7 @@
                 rounded 
                 icon-left="paper-plane"
                 size="is-small" 
-                class="is-link"
+                class="is-primary"
               >
                 CONNECT
               </b-button>
