@@ -3,7 +3,7 @@
     <div class="container">
     <div class="content">
       <p class="title is-6 has-text-grey-lighter">
-        Copyright © {{ new Date().getFullYear() }} Kevin Custer. All rights reserved. | Staunton, VA
+        Copyright © {{ new Date().getFullYear() }} Kevin Custer. All rights reserved.
       </p>
       <p class="subtitle is-6 has-text-grey-lighter">
         <a href="rss.xml" class="has-text-twitter">

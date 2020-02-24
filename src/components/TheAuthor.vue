@@ -5,12 +5,16 @@
         <g-image alt="Author image" class="is-rounded author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
       </figure>
 
-      <h1 class="title is-4 has-text-primary">
+      <h1 class="title is-4 has-text-link">
         {{ $static.metadata.siteName }}
       </h1>
 
       <p class="subtitle is-6 has-text-grey-dark">
-        Full-stack web developer
+        Software Engineer
+      </p>
+
+      <p class="subtitle is-7 has-text-grey-dark">
+        I write about ServiceNow, Full-stack development, and more!
       </p>
 
       <p class="buttons is-centered">
@@ -51,6 +55,6 @@ export default {
 }
 
 .buttons {
-  margin-top: -1em;
+  margin-top: -0.3em;
 }
 </style>

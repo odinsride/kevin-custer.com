@@ -93,11 +93,15 @@ export default {
 
   .card-content > .content {
     h1, h2, h3 {
-      color: $primary;
+      color: $grey-dark;
     }
 
     h4, h5, h6 {
       color: $grey-dark;
+    }
+
+    a {
+      color: $primary;
     }
 
     blockquote {

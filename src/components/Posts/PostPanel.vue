@@ -19,7 +19,7 @@
                     <div class="level-item">
                       <p class="has-text-right">
                         <g-link :to="post.path">
-                          <b-button type="is-white is-rounded has-text-link"
+                          <b-button type="is-white is-rounded has-text-primary"
                                     icon-right="long-arrow-alt-right">
                                     More
                           </b-button>

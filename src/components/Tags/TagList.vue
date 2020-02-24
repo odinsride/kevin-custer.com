@@ -2,8 +2,8 @@
   <div class="content">
     <b-taglist>
       <transition name="fade" appear>
-        <b-tag rounded type="is-link" v-for="tag in tags" :key="tag.id">
-          <span class="has-text-weight-semibold">#{{ titleLower(tag.title) }}</span>
+        <b-tag rounded type="is-primary" v-for="tag in tags" :key="tag.id">
+          <span class="has-text-weight-semibold">{{ tag.title }}</span>
         </b-tag>
       </transition>
     </b-taglist>
@@ -16,12 +16,6 @@ export default {
     tags: {
       required: true,
       type: Array
-    }
-  },
-
-  methods: {
-    titleLower: (title) => {
-      return title.toLowerCase()
     }
   }
 }
