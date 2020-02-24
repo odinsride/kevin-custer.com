@@ -6,13 +6,13 @@
         Copyright © {{ new Date().getFullYear() }} Kevin Custer. All rights reserved. | Staunton, VA
       </p>
       <p class="subtitle is-6 has-text-grey-lighter">
-        <g-link to="/rss.xml" class="has-text-twitter">
+        <a href="rss.xml" class="has-text-twitter">
           RSS
-        </g-link>
+        </a>
          | 
-        <g-link to="/sitemap.xml" class="has-text-twitter">
+        <a href="sitemap.xml" class="has-text-twitter">
           Sitemap
-        </g-link>
+        </a>
       </p>
     </div>
     </div>
