@@ -8,6 +8,8 @@
         <b-button 
           type="is-light has-text-primary"
           v-on:click="filterPosts('All')"
+          role="button"
+          aria-label="All Categories"
         >
           All
         </b-button>
@@ -16,6 +18,8 @@
         <b-button
           type="is-light has-text-primary"
           v-on:click="filterPosts(tag.node.title)"
+          role="button"
+          :aria-label="tag.node.title"
         >
           {{ tag.node.title }}
         </b-button>

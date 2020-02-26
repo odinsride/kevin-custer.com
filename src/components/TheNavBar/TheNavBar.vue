@@ -31,6 +31,7 @@
                 icon-left="paper-plane"
                 size="is-small" 
                 class="is-primary"
+                role="button"
               >
                 CONNECT
               </b-button>

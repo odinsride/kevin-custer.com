@@ -2,7 +2,7 @@
   <section class="section">
     <div class="content has-text-centered">
       <figure class="image is-128x128" style="margin: auto">
-        <g-image alt="Author image" class="is-rounded author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
+        <g-image alt="Author image: Kevin Custer" class="is-rounded author__image" src="~/assets/images/author.jpg" width="180" height="180" blur="5" />
       </figure>
 
       <h1 class="title is-4 has-text-link">
@@ -22,14 +22,14 @@
         <b-tooltip type="is-black" 
                   label="Follow me on GitHub"
                   position="is-bottom">
-          <g-link to="https://www.github.com/odinsride">
+          <a href="https://www.github.com/odinsride" target="_blank" aria-label="Link to Kevin Custer on Github (New Window)">
             <b-icon
               pack="fab"
               icon="github"
               size="is-large"
               type="is-dark">
             </b-icon>
-          </g-link>
+          </a>
         </b-tooltip>
       </p>
     </div>

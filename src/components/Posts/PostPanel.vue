@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <g-link :to="post.path">
+      <g-link :to="post.path" :aria-label="post.title">
         <div class="card">
           <div class="card-content">
               <div class="content">
@@ -18,9 +18,10 @@
                   <div class="level-right">
                     <div class="level-item">
                       <p class="has-text-right">
-                        <g-link :to="post.path">
+                        <g-link :to="post.path" aria-label="Read full article">
                           <b-button type="is-white is-rounded has-text-primary"
-                                    icon-right="long-arrow-alt-right">
+                                    icon-right="long-arrow-alt-right"
+                                    role="button">
                                     More
                           </b-button>
                         </g-link>
