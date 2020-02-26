@@ -22,13 +22,17 @@
         <b-tooltip type="is-black" 
                   label="Follow me on GitHub"
                   position="is-bottom">
-          <a href="https://www.github.com/odinsride" target="_blank" aria-label="Link to Kevin Custer on Github (New Window)">
+          <a href="https://www.github.com/odinsride" 
+             target="_blank" 
+             aria-label="Link to Kevin Custer on Github (New Window)"
+             rel="noopener"
+          >
             <b-icon
               pack="fab"
               icon="github"
               size="is-large"
-              type="is-dark">
-            </b-icon>
+              type="is-dark"
+            ></b-icon>
           </a>
         </b-tooltip>
       </p>

@@ -15,14 +15,14 @@
                     </div>
                   </div>
 
-                  <div class="level-right">
+                  <div class="level-right is-hidden-mobile">
                     <div class="level-item">
                       <p class="has-text-right">
                         <g-link :to="post.path" aria-label="Read full article">
                           <b-button type="is-white is-rounded has-text-primary"
                                     icon-right="long-arrow-alt-right"
                                     role="button">
-                                    More
+                                    Read full article
                           </b-button>
                         </g-link>
                       </p>

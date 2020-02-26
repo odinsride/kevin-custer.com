@@ -44,7 +44,15 @@ export default {
   },
 
   metaInfo: {
-    title: 'Home'
+    title: 'Home',
+    meta: [
+      {
+        name: 'description',
+        content: 'Kevin Custer is a software engineer with over 15 years real world experience, \
+                  who writes about ServiceNow and other technologies including Ruby on Rails, Vue.js, \
+                  Linux, open-source software, and more.'
+      }
+    ]
   }
 }
 </script>
