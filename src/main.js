@@ -1,3 +1,6 @@
+// Muli Font
+require('typeface-muli')
+
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
