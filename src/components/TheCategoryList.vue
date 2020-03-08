@@ -7,6 +7,7 @@
       <p class="category">
         <b-button 
           type="is-light has-text-primary"
+          :class="{ 'has-text-weight-bold': active == 'All' }"
           v-on:click="filterPosts('All')"
           role="button"
           aria-label="All Categories"
@@ -17,6 +18,7 @@
       <p class="category" v-for="tag in $static.tags.edges" :key="tag.node.id">
         <b-button
           type="is-light has-text-primary"
+          :class="{ 'has-text-weight-bold': active == tag.node.title }"
           v-on:click="filterPosts(tag.node.title)"
           role="button"
           :aria-label="tag.node.title"
@@ -44,8 +46,13 @@ query Tags {
 
 <script>
 export default {
+  data: () => ({
+    active: "All"
+  }),
+
   methods: {
     filterPosts (tag) {
+      this.active = tag
       this.$emit('filterPosts', tag)
     }
   }
