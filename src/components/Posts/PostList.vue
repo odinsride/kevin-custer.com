@@ -1,13 +1,13 @@
 <template>
-      <div class="columns is-multiline">
-        <div
-          v-for="post in filteredPosts"
-          :key="post.node.id"
-          class="column is-12"
-        >
-          <PostPanel :post="post.node"/>
-        </div>
-      </div>
+  <div class="columns is-multiline">
+    <div
+      v-for="post in filteredPosts"
+      :key="post.node.id"
+      class="column is-12"
+    >
+      <PostPanel :post="post.node"/>
+    </div>
+  </div>
 </template>
 
 <static-query>

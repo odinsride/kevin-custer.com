@@ -17,6 +17,10 @@ export default {
       {
         name: 'Home',
         target: '/'
+      },
+      {
+        name: 'Resume',
+        target: '/resume'
       }
       // {
       //   name: 'Blog',
@@ -41,7 +45,7 @@ export default {
 
 <style scoped>
 a.navbar-item {
-  font-weight: 600;
-  text-shadow: 0px 1px 1px #c9c9c9;
+  font-weight: 700;
+  /* text-shadow: 0px 1px 1px #c9c9c9; */
 }
 </style>

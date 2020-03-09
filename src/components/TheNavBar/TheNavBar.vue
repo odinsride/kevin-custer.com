@@ -20,11 +20,11 @@
 
     <div :class="{ 'is-active': menuActive }" id="kcNav" class="navbar-menu">
 
-      <TheMenu/>
-
       <div class="navbar-end">
+        <TheMenu/>
         <div class="navbar-item">
           <div class="buttons">
+            
             <g-link to="/contact">
               <b-button 
                 rounded 
@@ -67,6 +67,9 @@ import TheMenu from "./TheMenu";
     -moz-box-shadow: 0 4px 6px -6px #999;
     box-shadow: 0 4px 6px -6px #999;
 
+  .navbar-brand {
+    margin-left: 0.5em;
+  }
     /* the rest of your styling */
 }
 </style>

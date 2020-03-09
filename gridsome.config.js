@@ -11,7 +11,8 @@ module.exports = {
   templates: {
     Project: '/project/:title',
     Post: '/blog/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
+    Job: '/job/:title'
   },
 
   plugins: [
@@ -35,6 +36,13 @@ module.exports = {
         typeName: 'Project'
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/jobs/*.md',
+        typeName: 'Job'
+      }
+    },    
     {
       use: '@gridsome/plugin-sitemap',
       options: {
