@@ -3,23 +3,36 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-8 is-offset-2">
-            <div class="resume-title column has-text-centered">
+          <div class="column is-2-widescreen is-3-tablet is-12-mobile is-offset-1-mobile">
+            <ResumeMenu />
+          </div>
+          <div class="column is-8-widescreen is-9-tablet is-12-mobile">
+            <div id="intro" class="resume-title column has-text-centered">
               <h1 class="title is-5 has-text-primary">{{ title }}</h1>
             </div>
             <IntroPanel :intro="intro" />
 
-            <div class="resume-title column has-text-centered">
+            <div id="competencies" class="resume-title column has-text-centered">
               <h1 class="title is-5 has-text-primary">Core Competencies</h1>
             </div>
             <CompetencyPanel :competencies="competencies" />
 
-            <div class="resume-title column has-text-centered">
+            <div id="techskills" class="resume-title column has-text-centered">
               <h1 class="title is-5 has-text-primary">Technical Skills</h1>
             </div>
             <SkillPanel :skills="skills" />
 
-            <div class="resume-title column has-text-centered">
+            <div id="certifications" class="resume-title column has-text-centered">
+              <h1 class="title is-5 has-text-primary">Certifications</h1>
+            </div>
+            <CertPanel :certifications="certifications" />
+
+            <div id="education" class="resume-title column has-text-centered">
+              <h1 class="title is-5 has-text-primary">Education</h1>
+            </div>
+            <EduPanel :education="education" />
+
+            <div id="experience" class="resume-title column has-text-centered">
               <h1 class="title is-5 has-text-primary">Professional Experience</h1>
             </div>
             <JobList />
@@ -31,22 +44,28 @@
 </template>
 
 <script>
+import ResumeMenu from '@/components/Resume/ResumeMenu'
 import IntroPanel from '@/components/Resume/IntroPanel'
 import CompetencyPanel from '@/components/Resume/CompetencyPanel'
 import SkillPanel from '@/components/Resume/SkillPanel'
+import CertPanel from '@/components/Resume/CertPanel'
+import EduPanel from '@/components/Resume/EduPanel'
 import JobList from '@/components/Resume/JobList'
 
 export default {
   components: {
+    ResumeMenu,
     IntroPanel,
     CompetencyPanel,
     SkillPanel,
+    CertPanel,
+    EduPanel,
     JobList
   },
 
   data () {
     return {
-      title: "Software Engineer",
+      title: "About Kevin Custer",
       intro: "Detail-oriented IT Specialist with experience working on a broad range of corporate IT solutions which \
               include planning, design, development, testing, and implementation of applications in direct support of \
               client business objectives",
@@ -141,6 +160,10 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+
 .resume-title {
   text-transform: uppercase;
 }

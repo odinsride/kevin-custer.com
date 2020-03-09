@@ -58,11 +58,11 @@ export default {
 }
 
 .title {
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
 
 .title:not(:first-of-type){
-  margin-top: 1.5em;
+  margin-top: 1.25em;
 }
 @media screen and (max-width: 768px) {
   .card {
