@@ -16,7 +16,7 @@ Served as OBIEE lead for the project and was responsible for resolving issues in
 
 ##### US Postal Service
 
-Served as OBIEE lead for the project and was responsible for resolving issues in the Oracle Business Intelligence (OBIEE) system in order to proceed with go-live into production.  Also developed report enhancements requested by the customer.  Managed phased deployments and provided continual 24x7 on-call production support for the system.  Additionally, was required to adapt quickly and develop new, high-priority/visibility dashboards based on increasing crime trends around the city.  The business intelligence system was used to evaluate police officer performance and recognition as well as trends in crime statistics.
+Developed custom reports and interfaces for an Oracle E-Business Suite 12 pilot implementation.  The primary module used was Oracle Inventory. Responsible for design, documentation (created technical specification and test script documents), development, and functional/unit testing of assigned work products.  Helped Oracle deliver a successful pilot project that resulted in the customer signing on for a full-scale implementation of Oracle EBS 12.
 
 ##### Oracle Technology Business Unit
 
