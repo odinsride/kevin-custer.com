@@ -32,7 +32,7 @@
 
 <static-query>
 query Tags {
-  tags: allTag(sortBy: "title") {
+  tags: allTag(sortBy: "title", order: ASC) {
     edges {
       node {
         id
