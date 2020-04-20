@@ -3,6 +3,7 @@ title: "How to use Multiple Git Identities on One Host"
 date: 2020-02-26
 tags: ['Git']
 author: Kevin Custer
+publish: yes
 excerpt: >-
   If you've ever found the need to make git commits using a different identity based on the repository, you'll
   be glad to hear that it's possible by using folder-specific git identity files and including them in your main

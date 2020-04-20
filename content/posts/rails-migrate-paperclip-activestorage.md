@@ -3,6 +3,7 @@ title: "Migrate a Rails Project from Paperclip to ActiveStorage"
 date: 2020-02-17
 tags: ['Rails']
 author: Kevin Custer
+publish: yes
 excerpt: >-
   Paperclip was an infamous gem in the Rails world which provided file upload capabilities for Rails projects.  The gem was deprecated shortly after the release of Rails 5.2, which included a similar built-in capability known as ActiveStorage. This guide is intended to help with migrating a Paperclip-enabled Rails project to instead use ActiveStorage (specifically with Amazon S3 storage).
 ---

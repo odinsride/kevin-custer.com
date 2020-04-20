@@ -5,7 +5,7 @@
       :key="post.node.id"
       class="column is-12"
     >
-      <PostPanel :post="post.node"/>
+      <PostPanel :post="post.node" v-if="post.node.publish == 'yes'"/>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@ query Posts {
         }
         path
         date
+        publish
         excerpt
       }
     }

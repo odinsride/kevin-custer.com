@@ -3,6 +3,7 @@ title: "Embed a Widget with Options in a Catalog Item in ServiceNow"
 date: 2020-03-10
 tags: ['ServiceNow']
 author: Kevin Custer
+publish: yes
 excerpt: >-
   Did you know that it's possible to use Service Portal widgets inside of a Catalog Item and also pass instance options into the widget? This article will show you how!
 ---
