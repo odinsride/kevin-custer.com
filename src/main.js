@@ -9,7 +9,8 @@ import {
   faGlobe,
   faLongArrowAltRight,
   faHashtag,
-  faHome
+  faHome,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
@@ -40,7 +41,8 @@ export default function (Vue, { router, head, isClient }) {
     faGithub,
     faLongArrowAltRight,
     faHashtag,
-    faHome
+    faHome,
+    faExternalLinkAlt
   )
 
   Vue.use(Buefy, {
