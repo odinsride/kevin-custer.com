@@ -1,14 +1,25 @@
-# Default starter for Gridsome
+# kevin-custer.com
 
-This is the project you get when you run `gridsome create new-project`.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d3bafb5b-8882-461e-890a-99d2135f6300/deploy-status)](https://app.netlify.com/sites/kevin-custer/deploys)
 
-### 1. Install Gridsome CLI tool if you don't have
+This is my personal blog, resume, and portfolio.  It is built using [Gridsome](https://gridsome.org/) (a Vue static-site framework), which lets me write content in Markdown and publish articles using Git commits.  I am also using the following neat plugins:
 
-`npm install --global @gridsome/cli`
+* **buefy** - the CSS framework and component library
+* **@gridsome/plugin-sitemap** - generates the sitemap
+* **gridsome-plugin-feed** - generates an RSS feed for syndication
+* **vue-disqus** - enables Disqus commenting system on blog articles
 
-### 2. Create a Gridsome project
+The site is deployed to [Netlify](https://netlify.com).
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+## Usage
+
+This blog is licensed under the [MIT license](LICENSE). Feel free to fork/clone/copy this repository to use as a basis for your own blog. I do recommend that you will change at least the colors and fonts so it doesn't look just like mine :).  
+
+### How to build on your own
+
+1. Make sure you have `gridsome` installed
+2. Clone this repository.
+3. `cd` into the project directory.
+4. Run `yarn` to install dependencies.
+5. `gridsome develop` to start a local dev server at `http://localhost:8080`
+6. Happy customizing! 🎉🙌

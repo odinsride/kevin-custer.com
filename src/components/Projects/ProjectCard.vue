@@ -25,11 +25,11 @@
       </div>
       <div class="kc-card-content">
         <TechList :techs="techs"/>
-        <p class="kc-learn-more">
+        <!-- <p class="kc-learn-more">
           <a class="button is-link is-outlined">
             Learn More
           </a>
-        </p>
+        </p> -->
       </div>
       <div class="kc-card-footer has-text-right"
            v-if="project.node.github || project.node.url">

@@ -2,7 +2,7 @@
   <nav class="navbar is-transparent" role="navigation" aria-label="main-navigation">
     <div class="navbar-brand">
       <g-link class="navbar-item" to="/">
-     		<g-image alt="Kevin Custer: Full-stack developer" src="~/assets/images/logo.png" width="200" blur="5" />
+     		<g-image alt="Kevin Custer: Full-stack developer" src="~/assets/images/logo.png" width="200" blur="5" quality="100" />
       </g-link>
       <a 
         :class="{ 'is-active': menuActive }"

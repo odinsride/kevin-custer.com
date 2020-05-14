@@ -1,11 +1,11 @@
 <template>
   <section class="section" id="projects">
-      <h1 class="title is-size-4 has-text-primary">Recent Projects</h1>
+      <h1 class="title is-size-4 has-text-primary">My Work</h1>
       <div class="columns is-multiline">
         <div 
           v-for="project in $static.projects.edges" 
           :key="project.node.id"
-          class="column is-4"
+          class="column is-12-mobile is-6-tablet is-4-widescreen"
         >
           <ProjectCard :project="project"/>
         </div>

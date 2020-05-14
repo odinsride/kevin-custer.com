@@ -1,5 +1,5 @@
 <template>
-  <b-menu class="sticky">
+  <b-menu class="sticky is-hidden-mobile">
     <b-menu-list label="Resume">
       <b-menu-item href="/resume" label="About"></b-menu-item>
       <b-menu-item href="#competencies" label="Core Competencies"></b-menu-item>
