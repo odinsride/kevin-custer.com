@@ -6,11 +6,11 @@
         Copyright © {{ new Date().getFullYear() }} Kevin Custer. All rights reserved.
       </p>
       <p class="subtitle is-6 has-text-grey-dark">
-        <a href="rss.xml" class="has-text-primary" aria-label="RSS Feed">
+        <a href="/rss.xml" class="has-text-primary" aria-label="RSS Feed">
           RSS
         </a>
          | 
-        <a href="sitemap.xml" class="has-text-primary" aria-label="Sitemap">
+        <a href="/sitemap.xml" class="has-text-primary" aria-label="Sitemap">
           Sitemap
         </a>
       </p>

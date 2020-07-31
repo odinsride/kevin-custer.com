@@ -46,10 +46,19 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
+        exclude: ['/success'],
         config: {
           '/blog/*': {
-            changefreq: 'weekly',
+            changefreq: 'monthly',
             priority: 0.5
+          },
+          '/portfolio': {
+            changefreq: 'monthly',
+            priority: 0.7
+          },
+          '/resume': {
+            changefreq: 'monthly',
+            priority: 0.8
           }
         }
       }

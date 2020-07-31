@@ -68,12 +68,16 @@ export default {
 <style scoped lang="scss">
 a.navbar-item {
   .button {
+    font-size: 0.85em;
     text-decoration: none;
-    //text-transform: uppercase;
+    text-transform: uppercase;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
   
   .is-active {
-    text-decoration: underline;
+    font-weight: 700 !important;
+    //text-decoration: underline;
     background-color: inherit;
   }
 }

@@ -17,7 +17,7 @@
               <div class="card">
                 <div class="card-content">
                   <div class="content">
-                    <p v-html="$page.post.content" />
+                    <div v-html="$page.post.content"></div>
                   </div>
                 </div>
               </div>
