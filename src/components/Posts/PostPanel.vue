@@ -71,6 +71,7 @@ export default {
   border-radius: 5px;
   margin-top: 0;
   margin-bottom: 2em;
+  line-height: 1.75;
 
   &:hover {
     transform: translateY(-5px);

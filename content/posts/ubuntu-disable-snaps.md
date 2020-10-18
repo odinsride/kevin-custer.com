@@ -32,6 +32,7 @@ core18             20200311          1705  latest/stable    canonical✓  base
 gnome-3-34-1804    0+git.2c86692     24    latest/stable/…  canonical✓  -
 gtk-common-themes  0.1-30-gd41a42a   1502  latest/stable/…  canonical✓  -
 snap-store         20200415.e028804  394   latest/stable/…  canonical✓  -
+snapd              2.44.3            7264  latest/stable    canonical✓  snapd
 ```
 
 To remove these, you will need them using `sudo snap remove <package>`.
@@ -43,6 +44,7 @@ sudo snap remove snap-store
 sudo snap remove gtk-common-themes
 sudo snap remove gnome-3-34-1804
 sudo snap remove core18
+sudo snap remove snapd
 ```
 
 You might be wondering why I didn't remove the `core` snap...well it turns out you can't remove that one but it will get removed anyway in the next steps.
@@ -73,6 +75,10 @@ sudo rm -rf /snap
 sudo rm -rf /var/snap
 sudo rm -rf /var/lib/snapd
 ```
+
+## Gotchas
+
+* If you are a user of the Chromium browser, you will want to add the PPAs before installing, as installing the default `chromium-browser` package will automatically reinstall `snapd` ... eww! 
 
 ## Enjoy a snap-free Ubuntu
 

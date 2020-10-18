@@ -172,7 +172,7 @@ export default {
     padding-top: 10px;
 
     .kc-card-title {
-      font-weight: 400;
+      font-weight: 600;
       font-size: 1.3em;
       margin-bottom: 5px;
     }

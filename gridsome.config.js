@@ -59,6 +59,14 @@ module.exports = {
           '/resume': {
             changefreq: 'monthly',
             priority: 0.8
+          },
+          '/contact': {
+            changefreq: 'yearly',
+            priority: 0.9
+          },
+          '/': {
+            changefreq: 'weekly',
+            priority: 0.3
           }
         }
       }
