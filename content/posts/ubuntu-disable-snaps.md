@@ -3,6 +3,7 @@ title: "Disabling Snaps in Ubuntu 20.10 (and 20.04 LTS)"
 date: 2020-10-29
 tags: ['Linux']
 author: Kevin Custer
+slug: disabling-snaps-in-ubuntu-20-04
 publish: yes
 excerpt: >-
   With the newly released Ubuntu 20.10 upon us, and the recently released LTS (20.04), many have mixed feelings about the proliferation of snap packages in Ubuntu. In this article I'll show you how to completely remove the snap system from Ubuntu if you prefer a purely apt sytem 🙂
