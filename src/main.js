@@ -27,8 +27,8 @@ import 'prismjs/themes/prism-tomorrow.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
 // Buefy
-import '~/assets/styles/index.scss';
-import Buefy from 'buefy';
+// import '~/assets/styles/index.scss';
+// import Buefy from 'buefy';
 
 // Disqus
 import VueDisqus from 'vue-disqus'
@@ -45,10 +45,10 @@ export default function (Vue, { router, head, isClient }) {
     faExternalLinkAlt
   )
 
-  Vue.use(Buefy, {
-    defaultIconPack: 'fa',
-    defaultIconComponent: 'font-awesome-icon'
-  }, formatDate)
+  // Vue.use(Buefy, {
+  //   defaultIconPack: 'fa',
+  //   defaultIconComponent: 'font-awesome-icon'
+  // }, formatDate)
 
   Vue.use(VueDisqus)
 

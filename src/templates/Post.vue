@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/styles/index';
+// @import '~/assets/styles/index';
 
 .card {
   box-shadow: 0 0.5em 1em -0.125em rgba(0,0,0,0.1), 0 0px 0 1px rgba(0,0,0,0.02);
@@ -93,20 +93,20 @@ export default {
 
   .card-content > .content {
     h1, h2, h3 {
-      color: $grey-dark;
+      // color: $grey-dark;
     }
 
     h4, h5, h6 {
-      color: $grey-dark;
+      // color: $grey-dark;
     }
 
     a {
-      color: $primary;
+      // color: $primary;
     }
 
     blockquote {
-      background-color: lighten($link, 57%);
-      border-color: lighten($link, 30%);
+      // background-color: lighten($link, 57%);
+      // border-color: lighten($link, 30%);
     }
 
     li {

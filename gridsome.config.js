@@ -96,6 +96,9 @@ module.exports = {
       }
     },
     {
+      use: "gridsome-plugin-tailwindcss"
+    },
+    {
       use: 'vee-validate'
     }
   ],
