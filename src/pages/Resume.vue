@@ -113,7 +113,7 @@ export default {
           "Gridsome"
         ],
         tools: [
-          "ServiceNow (Orlando)",
+          "ServiceNow (Quebec)",
           "Oracle E-Business Suite",
           "OBIEE",
           "Oracle BI Publisher",
