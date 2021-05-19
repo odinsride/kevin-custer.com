@@ -1,75 +1,43 @@
 <template>
-  <nav class="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div class="navbar-brand">
-      <g-link class="navbar-item" to="/">
-     		<g-image alt="Kevin Custer: Full-stack developer" src="~/assets/images/logo.png" width="200" blur="5" quality="100" />
-      </g-link>
-      <a 
-        :class="{ 'is-active': menuActive }"
-        role="button" 
-        class="navbar-burger burger" 
-        aria-label="menu" 
-        aria-expanded="false" 
-        @click="menuActive = !menuActive"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+  <nav class="py-4 px-2 md:px-6 lg:px-12 flex flex-wrap justify-between items-center shadow border-t-8 border-green-600">
 
-    <div :class="{ 'is-active': menuActive }" id="kcNav" class="navbar-menu">
-
-      <div class="navbar-end">
-        <TheMenu/>
-        <div class="navbar-item">
-          <div class="buttons">
-            
-            <g-link to="/contact">
-              <b-button 
-                rounded 
-                icon-left="paper-plane"
-                size="is-small" 
-                class="is-primary"
-                role="button"
-              >
-                CONNECT
-              </b-button>
-            </g-link>
-          </div>
-        </div>
+      <!-- left -->
+      <div class="w-full relative flex justify-between lg:w-auto  lg:static lg:block lg:justify-start">
+        <g-link to="/">
+          <g-image alt="Kevin Custer: Full-stack developer" src="~/assets/images/logo.png" width="250" blur="5" quality="100" />
+        </g-link>
+        <button class="text-gray-500 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" v-on:click="toggleNavbar()">
+          <font-awesome-icon icon="bars"></font-awesome-icon>
+        </button>
       </div>
-    </div>
+  
+      <!-- right -->
+      <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+        <TheMenu/>
+      </div>
   </nav>
 </template>
 
 <script>
 import TheMenu from "./TheMenu";
 
-  export default {
-    name: 'TheNavBar',
+export default {
+  name: "TheNavBar",
 
-    components: {
-      TheMenu
-    },
+  components: {
+    TheMenu
+  },
+  
+  data() {
+    return {
+      showMenu: false
+    }
+  },
 
-    data () {
-      return {
-        menuActive: false,
-      }
+  methods: {
+    toggleNavbar: function(){
+      this.showMenu = !this.showMenu;
     }
   }
-</script>
-
-<style lang="scss" scoped>
-.navbar {
-    -webkit-box-shadow: 0 4px 6px -6px #999;
-    -moz-box-shadow: 0 4px 6px -6px #999;
-    box-shadow: 0 4px 6px -6px #999;
-
-  .navbar-brand {
-    margin-left: 0.5em;
-  }
-    /* the rest of your styling */
 }
-</style>
+</script>

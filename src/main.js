@@ -1,8 +1,7 @@
-// Muli Font
-require('typeface-muli')
+// Mulish Font
+import '@fontsource/mulish'
 
 // Fontawesome
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
   faPaperPlane,
   faInfoCircle,
@@ -10,11 +9,13 @@ import {
   faLongArrowAltRight,
   faHashtag,
   faHome,
-  faExternalLinkAlt
+  faExternalLinkAlt,
+  faBars
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Helpers
@@ -42,7 +43,8 @@ export default function (Vue, { router, head, isClient }) {
     faLongArrowAltRight,
     faHashtag,
     faHome,
-    faExternalLinkAlt
+    faExternalLinkAlt,
+    faBars
   )
 
   // Vue.use(Buefy, {

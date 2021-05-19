@@ -1,84 +1,73 @@
 <template>
-  <div class="navbar-start">
-    <template v-for="(menuItem, index) in menuItems">
-      <b-navbar-item 
-        class="has-text-primary" 
-        :key="index" 
-        :href="menuItem.href" 
-        :target="menuItem.target ? menuItem.target : '_self'"
+  <ul class="flex flex-col lg:flex-row list-none ml-auto">
+    <li v-for="menuItem in menuItems" :key="menuItem.name">
+      <a v-if="menuItem.target == '_blank'" 
+         :href="menuItem.href" 
+         :target="menuItem.target" 
+         class="px-1 mx-3 py-1 my-2 flex items-center font-bold leading-snug text-green-700 hover:opacity-75"
       >
-        <b-button 
-          type="is-text has-text-primary has-text-weight-medium" 
-          :class="setActiveClass(menuItem.href, currentRoute)" 
-          role="button" size="" 
-          :icon-right="menuItem.icon ? menuItem.icon : ''" rounded
-        >
-          {{menuItem.name}}
-        </b-button>
-      </b-navbar-item>
-    </template>
-  </div>
+        <span class="mr-2">{{menuItem.name}}</span>
+        <font-awesome-icon icon="external-link-alt" size="sm"></font-awesome-icon>
+      </a>
+      <g-link v-else 
+              :to="menuItem.href"
+              :class="setActiveClass(menuItem.href, currentRoute)" 
+              class="px-1 mx-3 py-1 my-2 flex items-center font-bold leading-snug text-green-700 hover:opacity-75"
+      >
+        <span class="">{{menuItem.name}}</span>
+      </g-link>
+    </li>
+  </ul>
 </template>
 
 <script>
-export default {
-  name: 'TheMenu',
+  export default {
+    name: 'TheMenu',
 
-  data: () => ({
-    menuItems: [
-      {
-        name: 'Home',
-        href: '/'
-      },
-      {
-        name: 'Portfolio',
-        href: '/portfolio'
-      },
-      {
-        name: 'Resume',
-        href: '/resume'
-      },
-      // {
-      //   name: 'Skills',
-      //   href: '#skills',
-      // },
-      {
-         name: 'Photography',
-         href: 'https://photos.kevin-custer.com',
-         target: '_blank',
-         icon: 'external-link-alt'
-      },
-    ]
-  }),
+    data: () => ({
+      menuItems: [
+        {
+          name: 'Blog',
+          href: '/'
+        },
+        {
+          name: 'Portfolio',
+          href: '/portfolio'
+        },
+        {
+          name: 'Resume',
+          href: '/resume'
+        },
+        // {
+        //   name: 'Skills',
+        //   href: '#skills',
+        // },
+        {
+          name: 'Photography',
+          href: 'https://photos.kevin-custer.com',
+          target: '_blank',
+        },
+      ]
+    }),
 
-  computed: {
-    currentRoute() {
-      return this.$route.path;
-    }
-  },
-  
-  methods: {
-    setActiveClass (href, curr) {
-      return href == curr ? 'is-active' : ''
+    computed: {
+      currentRoute() {
+        return this.$route.path;
+      }
+    },
+    
+    methods: {
+      setActiveClass (href, curr) {
+        return href == curr ? 'is-active' : ''
+      }
     }
   }
-}
 </script>
 
-<style scoped lang="scss">
-a.navbar-item {
-  .button {
-    font-size: 0.85em;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+<style>
+  @layer components {
+    .is-active {
+      @apply text-green-800 border-b-4 border-gray-200
+    }
   }
-  
-  .is-active {
-    font-weight: 700 !important;
-    //text-decoration: underline;
-    background-color: inherit;
-  }
-}
 </style>
