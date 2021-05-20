@@ -23,6 +23,9 @@ module.exports = {
     },
     extend: {
     },
+    fontFamily: {
+      sans: ['Mulish', 'sans-serif']
+    }
   },
   variants: {
     extend: {},

@@ -1,9 +1,8 @@
 <template>
-  <div class="columns is-multiline">
+  <div>
     <div
       v-for="post in filteredPosts"
       :key="post.node.id"
-      class="column is-12"
     >
       <PostPanel :post="post.node" v-if="post.node.publish == 'yes'"/>
     </div>

@@ -1,13 +1,12 @@
 <template>
-  <section class="hero is-link is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title is-size-4 is-size-5-mobile has-text-centered kc-hero">
-          {{ title }}
-        </h1>
-      </div>
+  <div class="py-6 md:py-12 px-12 bg-gradient-to-br from-green-700 to-green-500 text-white text-center">
+    <!-- left -->
+    <div class="">
+      <h2 class="lg:text-xl font-semibold text-shadow-md kc-hero">
+        {{ title }}
+      </h2>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <h1 :class="size" class="is-size-5-mobile title has-text-link">{{ post.title }}</h1>
+  <div>
+    <h1 :class="size" class="text-green-700 font-semibold mb-4">{{ post.title }}</h1>
   </div>
 </template>
 
@@ -13,14 +13,8 @@ export default {
     },
     size: {
       type: String,
-      default: 'is-size-4'
+      default: 'text-lg'
     }
   }
 }
 </script>
-
-<style>
-.title {
-    margin-bottom: 0.3em;
-}
-</style>

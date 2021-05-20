@@ -1,40 +1,35 @@
 <template>
-  <transition name="fade" appear>
-    <article>
-      <g-link :to="post.path" :aria-label="post.title">
-        <div class="card">
-          <div class="card-content">
-              <div class="content">
-                <PostTitle :post="post" />
-                <p>{{ post.excerpt }}</p>
-                <TagList :tags="post.tags" />
-                <nav class="level is-mobile">
-                  <div class="level-left">
-                    <div class="level-item">
-                      <PostMeta :post="post" />
-                    </div>
-                  </div>
+  <article class="hover:shadow-xl transition ease-in-out duration-500">
+    <g-link :to="post.path" :aria-label="post.title">
+      <div class="px-4 py-6 mb-4 shadow rounded bg-white">
+        <PostTitle :post="post" />
+        <p class="text-gray-700">{{ post.excerpt }}</p>
+        <TagList :tags="post.tags" />
 
-                  <div class="level-right is-hidden-mobile">
-                    <div class="level-item">
-                      <p class="has-text-right">
-                        <g-link :to="post.path" aria-label="Read full article">
-                          <b-button type="is-white is-rounded has-text-primary"
-                                    icon-right="long-arrow-alt-right"
-                                    role="button">
-                                    Read full article
-                          </b-button>
-                        </g-link>
-                      </p>
-                    </div>
-                  </div>
-                </nav>
-              </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <div class="level-item">
+              <PostMeta :post="post" />
+            </div>
           </div>
-        </div>
-      </g-link>
-    </article>
-  </transition>
+
+          <div class="level-right is-hidden-mobile">
+            <div class="level-item">
+              <p class="has-text-right">
+                <g-link :to="post.path" aria-label="Read full article">
+                  <b-button type="is-white is-rounded has-text-primary"
+                            icon-right="long-arrow-alt-right"
+                            role="button">
+                            Read full article
+                  </b-button>
+                </g-link>
+              </p>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </g-link>
+  </article>
 </template>
 
 <script>

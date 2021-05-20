@@ -1,14 +1,16 @@
 <template>
-  <div id="app">
-    <header class="header">
+  <div id="app" class="flex flex-col min-h-screen">
+    <header>
       <TheNavBar/>
     </header>
-    <transition name="slide-fade" appear>
-      <main class="site-content">
-        <slot />
-      </main>
-    </transition>
-    <TheFooter />
+
+    <main class="flex-grow h-full bg-gray-100">
+      <slot />
+    </main>
+
+    <footer>
+      <TheFooter/>
+    </footer>
   </div>
 </template>
 
@@ -33,9 +35,9 @@ query {
 </script>
 
 <style lang="scss">
-body {
-  font-family: 'Mulish';
-}
+// body {
+//   font-family: 'Mulish';
+// }
 
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */

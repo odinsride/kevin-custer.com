@@ -15,6 +15,7 @@
       <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
         <TheMenu/>
       </div>
+      
   </nav>
 </template>
 
