@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-10">
     <div
       v-for="post in filteredPosts"
       :key="post.node.id"

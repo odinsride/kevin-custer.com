@@ -1,41 +1,23 @@
 <template>
   <article class="hover:shadow-xl transition ease-in-out duration-500">
     <g-link :to="post.path" :aria-label="post.title">
-      <div class="px-4 py-6 mb-4 shadow rounded bg-white">
+      <div class="px-6 lg:px-8 py-8 lg:py-10 mb-4 lg:mb-8 shadow rounded bg-white">
         <PostTitle :post="post" />
-        <p class="text-gray-700">{{ post.excerpt }}</p>
+
+        <p class="text-gray-700 lg:leading-relaxed">{{ post.excerpt }}</p>
+        
         <TagList :tags="post.tags" />
 
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <div class="level-item">
-              <PostMeta :post="post" />
-            </div>
-          </div>
-
-          <div class="level-right is-hidden-mobile">
-            <div class="level-item">
-              <p class="has-text-right">
-                <g-link :to="post.path" aria-label="Read full article">
-                  <b-button type="is-white is-rounded has-text-primary"
-                            icon-right="long-arrow-alt-right"
-                            role="button">
-                            Read full article
-                  </b-button>
-                </g-link>
-              </p>
-            </div>
-          </div>
-        </nav>
+        <PostFooter :post="post" />
       </div>
     </g-link>
   </article>
 </template>
 
 <script>
-import PostMeta from './PostMeta'
 import PostTitle from './PostTitle'
 import TagList from '@/components/Tags/TagList'
+import PostFooter from './PostFooter'
 
 export default {
   data () {
@@ -45,9 +27,9 @@ export default {
   },
   
   components: {
-    PostMeta,
     PostTitle,
-    TagList
+    TagList,
+    PostFooter,
   },
 
   props: {

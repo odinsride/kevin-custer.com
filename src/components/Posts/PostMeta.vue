@@ -1,8 +1,6 @@
 <template>
-  <div class="content">
-    <span :class="[color, size]" class="has-text-grey-dark is-size-7-mobile is-uppercase has-text-weight-semibold">
-      <span class="is-lowercase">by</span> {{ post.author }} <span class="is-lowercase">on</span> {{ datePretty }}
-    </span>
+  <div :class="[color, size]" class="uppercase font-semibold">
+    <span class="lowercase">by</span> {{ post.author }} <span class="lowercase">on</span> {{ datePretty }}
   </div>
 </template>
 
@@ -25,11 +23,11 @@ export default {
     },
     color: {
       type: String,
-      default: 'has-text-grey'
+      default: 'text-gray-600'
     },
     size: {
       type: String,
-      default: 'is-size-7'
+      default: 'text-xs'
     }
   },
   computed: {

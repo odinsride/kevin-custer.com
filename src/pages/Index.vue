@@ -3,11 +3,11 @@
 
     <TheHero/>
 
-    <section class="px-2 py-2 mt-4 lg:flex">
-      <div class="">
+    <section class="px-2 py-2 mt-4 justify-center lg:flex">
+      <div class="lg:flex-1 lg:max-w-screen-lg">
         <PostList :filter="filter" />
       </div>
-      <div class="">
+      <div class="lg:flex-none max-w-xs">
         <TheCategoryList :filter="filter" v-on:filterPosts="updatePostFilter($event)" />
         <TheAuthor />
       </div>

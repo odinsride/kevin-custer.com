@@ -1,31 +1,31 @@
 <template>
   <aside>
-    <div class="has-text-centered">
-      <p class="title has-text-link is-size-4">
+    <div class="text-center">
+      <p class="text-green-700 text-lg lg:text-xl font-semibold mb-2">
         Categories
       </p>
-      <p class="category">
-        <b-button 
-          type="is-light has-text-primary"
-          :class="{ 'has-text-weight-bold': active == 'All' }"
+      <div>
+        <div 
+          :class="{ 'font-bold': active == 'All' }"
+          class="text-green-700 text-sm lg:text-base py-1.5"
           v-on:click="filterPosts('All')"
           role="button"
           aria-label="All Categories"
         >
           All
-        </b-button>
-      </p>
-      <p class="category" v-for="tag in $static.tags.edges" :key="tag.node.id">
-        <b-button
-          type="is-light has-text-primary"
-          :class="{ 'has-text-weight-bold': active == tag.node.title }"
+        </div>
+      </div>
+      <div v-for="tag in $static.tags.edges" :key="tag.node.id">
+        <div
+          :class="{ 'font-bold': active == tag.node.title }"
+          class="text-green-700 text-sm lg:text-base py-1.5"
           v-on:click="filterPosts(tag.node.title)"
           role="button"
           :aria-label="tag.node.title"
         >
           {{ tag.node.title }}
-        </b-button>
-      </p>
+        </div>
+      </div>
     </div>
   </aside>
 </template>
@@ -58,9 +58,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.title {
-  margin-bottom: 1rem !important;
-}
-</style>
