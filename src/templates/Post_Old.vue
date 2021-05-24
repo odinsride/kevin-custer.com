@@ -1,19 +1,34 @@
 <template>
   <Layout>
-    <div class="md:px-20 md:py-10">
-      <article class="bg-white md:rounded-xl shadow-lg py-6 px-4 md:py-10 md:px-12 max-w-screen-lg mx-auto">
-        <div class="text-center">
-          <PostTitle :post="$page.post"/>
-          <PostMeta :post="$page.post"/>
-          <div class="tags-centered">
-            <TagList :tags="$page.post.tags" />
+    <article>
+      <section class="section" id="post">
+        <div class="container">
+          <div class="columns">
+            <div class="column 
+                        is-12-mobile is-12-tablet
+                        is-10-widescreen is-offset-1-widescreen">
+              <div class="has-text-centered">
+                <PostTitle :post="$page.post" :size="postTitleSize" />
+                <PostMeta :post="$page.post" :size="postMetaSize" :color="postMetaColor" />
+                <div class="tags-centered">
+                  <TagList :tags="$page.post.tags" />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <div class="content">
+                    <div v-html="$page.post.content"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="comments">
+                <vue-disqus shortname="kevincuster" :identifier="$page.post.title"></vue-disqus>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="content mt-4">
-          <div v-html="$page.post.content"></div>
-        </div>
-      </article>
-    </div>
+      </section>
+    </article>
   </Layout>
 </template>
 
@@ -54,60 +69,22 @@ export default {
     TagList
   },
 
-  // metaInfo () {
-  //   return {
-  //     title: this.$page.post.title,
-  //     meta: [
-  //       {
-  //         name: 'description',
-  //         content: this.$page.post.excerpt
-  //       }
-  //     ]
-  //   }
-  // }
+  metaInfo () {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.post.excerpt
+        }
+      ]
+    }
+  }
 }
 </script>
 
 <style lang="scss">
-@layer components {
-  .content {
-    h1 { @apply text-2xl font-bold }
-    h2 { @apply text-xl font-bold }
-    h3 { @apply text-lg font-semibold }
-    h4 { @apply text-base font-semibold }
-
-    h1, h2, h3 {
-      @apply text-gray-800 mt-6 mb-2
-    }
-
-    h4 {
-      @apply text-gray-800 my-2
-    }
-
-    p, li {
-      code {
-        @apply bg-gray-100 rounded px-1.5 py-1 text-green-800 text-opacity-80
-      }
-
-      @apply text-gray-700 text-sm md:text-base mb-2 leading-relaxed
-    }
-
-    ul {
-      @apply list-disc list-outside mx-6 my-4
-    }
-
-    blockquote {
-      @apply px-4 py-2 shadow bg-green-200 bg-opacity-50 border-l-4 border-green-500 border-opacity-60 mb-4
-    }
-
-    pre {
-      @apply rounded shadow
-    }
-
-  }
-}
-
-
+// @import '~/assets/styles/index';
 
 .card {
   box-shadow: 0 0.5em 1em -0.125em rgba(0,0,0,0.1), 0 0px 0 1px rgba(0,0,0,0.02);

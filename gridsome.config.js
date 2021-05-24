@@ -10,7 +10,7 @@ module.exports = {
 
   templates: {
     Project: '/project/:title',
-    Post: '/blog/:slug',
+    Post: '/blog/:title',
     Tag: '/tag/:id',
     Job: '/job/:title'
   },

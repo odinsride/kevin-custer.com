@@ -3,7 +3,7 @@
 
     <TheHero/>
 
-    <section class="px-2 py-2 mt-4 justify-center lg:flex">
+    <section class="px-2 md:px-6 py-2 mt-4 lg:mt-8 justify-center lg:flex">
       <div class="lg:flex-1 lg:max-w-screen-lg">
         <PostList :filter="filter" />
       </div>
