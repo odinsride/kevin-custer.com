@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <section class="section">
-      <div class="container">
+    <div class="container is-max-widescreen">
+      <div class="column is-10 is-offset-1">
         <div class="is-hidden-mobile">
           <TheCategoryList :filter="filter" v-on:filterPosts="updatePostFilter($event)" />
         </div>
         <PostList :filter="filter" />
       </div>
-    </section>
+    </div>
   </Layout>
 </template>
 

@@ -1,33 +1,28 @@
 <template>
-  <aside>
-    <div class="has-text-centered">
-      <p class="title has-text-link is-size-4">
-        Categories
-      </p>
-      <p class="category">
-        <b-button 
-          type="is-light has-text-primary"
-          :class="{ 'has-text-weight-bold': active == 'All' }"
-          v-on:click="filterPosts('All')"
-          role="button"
-          aria-label="All Categories"
-        >
-          All
-        </b-button>
-      </p>
-      <p class="category" v-for="tag in $static.tags.edges" :key="tag.node.id">
-        <b-button
-          type="is-light has-text-primary"
-          :class="{ 'has-text-weight-bold': active == tag.node.title }"
-          v-on:click="filterPosts(tag.node.title)"
-          role="button"
-          :aria-label="tag.node.title"
-        >
-          {{ tag.node.title }}
-        </b-button>
-      </p>
-    </div>
-  </aside>
+  <section class="section">
+    <b-taglist class="is-vcentered">
+      <span class="tag is-white has-text-weight-semibold">Filter</span>
+      <b-tag
+        type="is-light has-text-primary"
+        :class="{ 'has-text-weight-bold': active == 'All' }"
+        @click.native="filterPosts('All')"
+        aria-label="All Categories"
+      >
+        All
+      </b-tag>
+    <span v-for="tag in $static.tags.edges" :key="tag.node.id">
+      <b-tag
+        type="is-light has-text-primary"
+        :class="{ 'has-text-weight-bold': active == tag.node.title }"
+        @click.native="filterPosts(tag.node.title)"
+        :aria-label="tag.node.title"
+        role="button"
+      >
+        {{ tag.node.title }}
+      </b-tag>
+    </span>
+    </b-taglist>
+  </section>
 </template>
 
 <static-query>
@@ -60,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title {
-  margin-bottom: 1rem !important;
+.tag {
+  cursor: pointer;
 }
 </style>

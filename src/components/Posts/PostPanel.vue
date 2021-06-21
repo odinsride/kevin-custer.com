@@ -2,8 +2,8 @@
   <transition name="fade" appear>
     <article>
       <g-link :to="post.path" :aria-label="post.title">
-        <div class="card">
-          <div class="card-content">
+        <!-- <div class="card">
+          <div class="card-content"> -->
               <div class="content">
                 <PostTitle :post="post" />
                 <p>{{ post.excerpt }}</p>
@@ -30,8 +30,8 @@
                   </div>
                 </nav>
               </div>
-          </div>
-        </div>
+          <!-- </div>
+        </div> -->
       </g-link>
     </article>
   </transition>
@@ -66,17 +66,17 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  box-shadow: 0 0.5em 1em -0.125em rgba(0,0,0,0.1), 0 0px 0 1px rgba(0,0,0,0.02);
-  transition: transform .3s;
-  border-radius: 5px;
+  // box-shadow: 0 0.5em 1em -0.125em rgba(0,0,0,0.1), 0 0px 0 1px rgba(0,0,0,0.02);
+  // transition: transform .3s;
+  // border-radius: 5px;
   margin-top: 0;
   margin-bottom: 2em;
   line-height: 1.75;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
-  }
+  // &:hover {
+  //   transform: translateY(-5px);
+  //   box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+  // }
 }
 
 .fade-enter-active, .fade-leave-active {

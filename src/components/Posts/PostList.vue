@@ -1,13 +1,12 @@
 <template>
-  <div class="columns is-multiline">
-    <div
-      v-for="post in filteredPosts"
-      :key="post.node.id"
-      class="column is-12"
-    >
-      <PostPanel :post="post.node" v-if="post.node.publish == 'yes'"/>
+    <div class="mt-4">
+      <div
+        v-for="post in filteredPosts"
+        :key="post.node.id"
+      >
+        <PostPanel :post="post.node" v-if="post.node.publish == 'yes'"/>
+      </div>
     </div>
-  </div>
 </template>
 
 <static-query>
