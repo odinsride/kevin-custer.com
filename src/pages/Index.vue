@@ -1,16 +1,32 @@
 <template>
   <Layout>
 
-    <TheHero/>
+    <TheHero>
+      <template v-slot:title>
+        Hi, I'm <span class="border-b-4 border-secondary-300">Kevin</span>
+      </template>
+      <template v-slot:subtitle>
+        I am a <span class="font-bold">ServiceNow</span> developer, full-stack web developer, and landscape photographer from Virginia.
+      </template>
+      <template v-slot:cta>
+        <div class="mb-4 md:mb-0 md:mr-4">
+          <BaseButton text="Read my blog" secondary url="/blog"></BaseButton>
+        </div>
+        <div>
+          <BaseButton text="Connect with me" secondary light></BaseButton>
+        </div>
+      </template>
+    </TheHero>
 
-    <section class="px-2 md:px-6 py-2 mt-4 lg:mt-8 justify-center lg:flex">
-      <div class="lg:flex-1 lg:max-w-screen-lg">
-        <PostList :filter="filter" />
-      </div>
-      <div class="lg:flex-none max-w-xs">
-        <TheCategoryList :filter="filter" v-on:filterPosts="updatePostFilter($event)" />
-        <TheAuthor />
-      </div>
+    <section class="px-2 md:px-6 py-2 mt-4 lg:mt-8 justify-center lg:flex" style="margin-top: -140px">
+      <TheAuthor
+        name="Kevin Custer"
+        title="Software Engineer"
+        location="Staunton, VA"
+        github="odinsride"
+        linkedin="kevin-custer-sn"
+        twitter="kevincuster_"
+      ></TheAuthor>
     </section>
 
   </Layout>
@@ -19,27 +35,13 @@
 <script>
 import TheHero from '@/components/TheHero'
 import TheAuthor from '@/components/TheAuthor'
-import TheCategoryList from '@/components/TheCategoryList'
-import PostList from '@/components/Posts/PostList'
+import BaseButton from '@/components/BaseButton'
 
 export default {
   components: {
     TheHero,
     TheAuthor,
-    TheCategoryList,
-    PostList
-  },
-
-  data () {
-    return {
-      filter: 'All'
-    }
-  },
-
-  methods: {
-    updatePostFilter(filter) {
-      this.filter = filter
-    }
+    BaseButton
   },
 
   metaInfo: {
@@ -47,8 +49,8 @@ export default {
     meta: [
       {
         name: 'description',
-        content: 'Kevin Custer is a software engineer with over 15 years real world experience, \
-                  who writes about ServiceNow and other technologies including Ruby on Rails, Vue.js, \
+        content: 'Kevin Custer is a software engineer with over 16 years real world experience, \
+                  who writes about ServiceNow and other technologies including ServiceNow, Ruby on Rails, Vue.js, \
                   Linux, open-source software, and more.'
       }
     ]
@@ -57,7 +59,5 @@ export default {
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
+
 </style>

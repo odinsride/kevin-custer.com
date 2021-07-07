@@ -20,6 +20,9 @@ module.exports = {
       green: colors.teal,
       white: colors.white,
       black: colors.black,
+      primary: colors.teal,
+      secondary: colors.indigo,
+      blue: colors.blue
     },
     extend: {
     },

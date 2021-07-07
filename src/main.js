@@ -15,6 +15,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
+  faTwitter,
+  faLinkedin
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -40,6 +42,8 @@ export default function (Vue, { router, head, isClient }) {
     faInfoCircle,
     faGlobe,
     faGithub,
+    faTwitter,
+    faLinkedin,
     faLongArrowAltRight,
     faHashtag,
     faHome,

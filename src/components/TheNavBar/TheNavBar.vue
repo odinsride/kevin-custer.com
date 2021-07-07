@@ -1,37 +1,44 @@
 <template>
-  <nav class="py-4 px-2 md:px-6 lg:px-12 flex flex-wrap justify-between items-center shadow border-t-8 border-green-600">
+  <nav class="navbar">
 
       <!-- left -->
-      <div class="w-full relative flex justify-between lg:w-auto  lg:static lg:block lg:justify-start">
+      <div class="navbar-left">
         <g-link to="/">
           <g-image alt="Kevin Custer: Full-stack developer" src="~/assets/images/logo.png" width="250" blur="5" quality="100" />
         </g-link>
-        <button class="text-gray-500 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" v-on:click="toggleNavbar()">
+        <button class="navbar-menu-button" type="button" v-on:click="toggleNavbar()">
           <font-awesome-icon icon="bars"></font-awesome-icon>
         </button>
       </div>
   
       <!-- right -->
-      <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
-        <TheMenu/>
+      <div :class="{'hidden': !showMenu, 'flex': showMenu}" class="navbar-right">
+        <TheNavBarMenu :menuItems="menuItems"></TheNavBarMenu>
       </div>
       
   </nav>
 </template>
 
 <script>
-import TheMenu from "./TheMenu";
+import TheNavBarMenu from "./TheNavBarMenu";
 
 export default {
   name: "TheNavBar",
 
   components: {
-    TheMenu
+    TheNavBarMenu
   },
   
   data() {
     return {
       showMenu: false
+    }
+  },
+
+  props: {
+    menuItems: {
+      required: true,
+      type: Array
     }
   },
 
@@ -42,3 +49,23 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@layer components {
+  .navbar {
+    @apply py-4 px-2 md:px-6 lg:px-12 xl:px-48 flex flex-wrap justify-between items-center border-t-8 border-primary-600 bg-white;
+
+    .navbar-left {
+      @apply w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start;
+
+      .navbar-menu-button {
+        @apply text-gray-500 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none;
+      }
+    }
+
+    .navbar-right {
+      @apply lg:flex lg:flex-grow lg:items-center;
+    }
+  }
+}
+</style>

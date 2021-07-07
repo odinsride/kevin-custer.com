@@ -35,8 +35,8 @@ query Post($path: String!) {
 </page-query>
 
 <script>
-import PostTitle from '@/components/Posts/PostTitle'
-import PostMeta from '@/components/Posts/PostMeta'
+import PostTitle from '@/components/PostPanel/PostTitle'
+import PostMeta from '@/components/PostPanel/PostMeta'
 import TagList from '@/components/Tags/TagList'
 
 export default {

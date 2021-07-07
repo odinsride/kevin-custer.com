@@ -1,13 +1,13 @@
 <template>
   <aside>
-    <div class="text-center">
-      <p class="text-green-700 text-lg lg:text-xl font-semibold mb-2">
-        Categories
+    <div class="px-4">
+      <p class="text-primary-700 text-lg lg:text-2xl font-semibold mb-4">
+        Topics
       </p>
-      <div>
+      <div class="">
         <div 
           :class="{ 'font-bold': active == 'All' }"
-          class="text-green-700 text-sm lg:text-base py-1.5"
+          class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30"
           v-on:click="filterPosts('All')"
           role="button"
           aria-label="All Categories"
@@ -15,10 +15,10 @@
           All
         </div>
       </div>
-      <div v-for="tag in $static.tags.edges" :key="tag.node.id">
+      <div v-for="tag in $static.tags.edges" :key="tag.node.id" class="">
         <div
           :class="{ 'font-bold': active == tag.node.title }"
-          class="text-green-700 text-sm lg:text-base py-1.5"
+          class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30"
           v-on:click="filterPosts(tag.node.title)"
           role="button"
           :aria-label="tag.node.title"
