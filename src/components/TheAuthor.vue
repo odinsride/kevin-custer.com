@@ -1,65 +1,136 @@
 <template>
-  <section class="section">
-    <div class="content has-text-centered">
-      <figure class="image is-128x128" style="margin: auto">
-        <g-image alt="Author image: Kevin Custer" class="is-rounded author__image" src="~/assets/images/author3.jpg" blur="5" />
-      </figure>
+  <div class="author">
+    <figure class="author-image-container">
+      <g-image :alt="'Author image: ' + name" class="author-image" src="~/assets/images/author.jpg" blur="5" width="200" />
+    </figure>
 
-      <h1 class="title is-4 has-text-link">
-        {{ $static.metadata.siteName }}
-      </h1>
+    <div class="author-info-container">
+      <h3 class="author-info-name">
+        {{ name }}
+      </h3>
 
-      <p class="subtitle is-6 has-text-grey-dark has-text-weight-medium">
-        <strong>Software Engineer</strong><br/>
-        Staunton, VA
+      <p class="author-info-title">
+        <span class="font-bold">{{ title }}</span><br/>
+        {{ location }}
       </p>
 
-      <p class="subtitle is-7 has-text-grey-dark">
-        I write about ServiceNow, Full-stack development, and more!
-      </p>
-
-      <p class="buttons is-centered">
-        <b-tooltip type="is-black" 
-                  label="Follow me on GitHub"
-                  position="is-bottom">
-          <a href="https://www.github.com/odinsride" 
-             target="_blank" 
-             aria-label="Link to Kevin Custer on Github (New Window)"
-             rel="noopener"
+      <div class="author-info-links">
+        <BaseTooltip text="Follow me on GitHub" v-if="github">
+          <a :href="githubURL" 
+            target="_blank" 
+            :aria-label="'Link to ' + name + ' on GitHub (New Window)'"
+            rel="noopener"
+            class="text-gray-700 hover:text-black"
           >
-            <b-icon
-              pack="fab"
-              icon="github"
-              size="is-large"
-              type="is-dark"
-            ></b-icon>
+            <font-awesome-icon :icon="['fab', 'github']" size="2x"></font-awesome-icon>
           </a>
-        </b-tooltip>
-      </p>
+        </BaseTooltip>
+
+        <BaseTooltip text="Follow me on LinkedIn" v-if="linkedin">
+          <a :href="linkedinURL" 
+            target="_blank" 
+            :aria-label="'Link to ' + name + ' on LinkedIn (New Window)'"
+            rel="noopener"
+            class="text-gray-700 hover:text-blue-700"
+          >
+            <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"></font-awesome-icon>
+          </a>
+        </BaseTooltip>
+
+        <BaseTooltip text="Follow me on Twitter" v-if="twitter">
+          <a :href="twitterURL" 
+            target="_blank" 
+            :aria-label="'Link to ' + name + ' on Twitter (New Window)'"
+            rel="noopener"
+            class="text-gray-700 hover:text-blue-400"
+          >
+            <font-awesome-icon :icon="['fab', 'twitter']" size="2x"></font-awesome-icon>
+          </a>
+        </BaseTooltip>
+      </div>
     </div>
-  </section>
+  </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+
 
 <script>
-export default {
+import BaseTooltip from '@/components/BaseTooltip'
 
+export default {
+  name: 'TheAuthor',
+  components: {
+    BaseTooltip,
+  },
+  props: {
+    name: {
+      required: true,
+      type: String
+    },
+    title: {
+      required: true,
+      type: String
+    },
+    location: {
+      required: true,
+      type: String
+    },
+    github: {
+      required: false,
+      type: String
+    },
+    linkedin: {
+      required: false,
+      type: String
+    },
+    twitter: {
+      required: false,
+      type: String
+    }
+  },
+  computed: {
+    githubURL: function() {
+      return this.github && 'https://www.github.com/' + this.github
+    },
+    linkedinURL: function() {
+      return this.linkedin && 'https://www.linkedin.com/in/' + this.linkedin
+    },
+    twitterURL: function() {
+      return this.twitter && 'https://www.twitter.com/' + this.twitter
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.author__image {
-  box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.4);
-}
+@layer components {
+  .author {
+    @apply py-8 px-16;
 
-.buttons {
-  margin-top: -0.3em;
+    .author-image-container {
+      @apply flex justify-center;
+
+      .author-image {
+        @apply rounded-full h-auto align-middle border-secondary-300 border-4 border-opacity-80;
+        box-shadow: 0px 2px 28px 2px rgba(0,0,0,0.4);
+      }
+    }
+
+    .author-info-container {
+      @apply my-6 text-center text-gray-800;
+
+      .author-info-name {
+        @apply text-green-700 font-bold text-lg lg:text-xl;
+      }
+
+      .author-info-title {
+        @apply leading-relaxed mb-4 text-gray-800;
+      }
+
+      .author-info-links {
+        @apply flex flex-nowrap gap-4 justify-center;
+      }
+    }
+  }
 }
 </style>

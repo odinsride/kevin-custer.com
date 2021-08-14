@@ -1,27 +1,44 @@
 <template>
-  <section class="hero is-link is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title is-size-4 is-size-5-mobile has-text-centered kc-hero">
-          {{ title }}
-        </h1>
-      </div>
+  <div class="hero-container">
+    <h2 class="hero-title">
+      <slot name="title"></slot>
+    </h2>
+    <h3 class="hero-subtitle">
+      <slot name="subtitle"></slot>
+    </h3>
+    <div class="hero-cta" v-if="ctaPresent">
+      <slot name="cta"></slot>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'Hero',
-  
-  data: () => ({
-    title: "A blog about software development, technology, and open source."
-  })
+  computed: {
+    ctaPresent() {
+      return !!this.$slots.cta
+    }
+  }
 }
 </script>
 
-<style>
-.kc-hero {
-  text-shadow: 1px 1px 10px #636363;
+<style lang="scss" scoped>
+@layer components {
+  .hero-container {
+    @apply py-12 md:py-24 lg:py-32 px-4 md:px-24 bg-gradient-to-br from-primary-700 to-primary-500 text-gray-50 text-center shadow-lg;
+
+    .hero-title {
+      @apply lg:text-4xl text-xl font-semibold mb-6;
+    }
+
+    .hero-subtitle {
+      @apply lg:text-xl;
+    }
+
+    .hero-cta {
+      @apply mt-12 lg:mt-20 mb-24 md:mb-14 flex flex-col md:flex-row md:justify-center md:items-center;
+    }
+  }
 }
 </style>

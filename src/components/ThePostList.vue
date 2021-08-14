@@ -1,17 +1,16 @@
 <template>
-    <div class="mt-4">
-      <div
-        v-for="post in filteredPosts"
-        :key="post.node.id"
-      >
-        <PostPanel :post="post.node" v-if="post.node.publish == 'yes'"/>
-      </div>
+  <div class="mb-10 px-6 lg:px-8 divide-y-2 divide-secondary-300 divide-opacity-30">
+    <div
+      v-for="post in filteredPosts"
+      :key="post.node.id"
+    >
+      <PostPanel :post="post.node"></PostPanel>
     </div>
 </template>
 
 <static-query>
 query Posts {
-  posts: allPost(sortBy: "date", order: DESC) {
+  posts: allPost(filter: { publish: { eq: "yes" }}, sortBy: "date", order: DESC) {
     edges {
       node {
         id
@@ -32,9 +31,10 @@ query Posts {
 </static-query>
 
 <script>
-import PostPanel from './PostPanel'
+import PostPanel from '@/components/PostPanel/PostPanel'
 
 export default {
+  name: 'ThePostList',
   components: {
     PostPanel
   },

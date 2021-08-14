@@ -1,17 +1,18 @@
 <template>
-  <div class="content">
-    <b-taglist>
-      <transition name="fade" appear>
-        <b-tag rounded type="is-primary" v-for="tag in tags" :key="tag.id">
-          <span class="has-text-weight-semibold">{{ tag.title }}</span>
-        </b-tag>
-      </transition>
-    </b-taglist>
+  <div class="flex items-center my-4 lg:my-6">
+      <span class="mr-2 uppercase font-semibold text-xs text-gray-700">Tags:</span>
+      <Tag v-for="tag in tags" :key="tag.id" :tagText="tag.title"/>
   </div>
 </template>
 
 <script>
+import Tag from './Tag'
+
 export default {
+  components: {
+    Tag,
+  },
+
   props: {
     tags: {
       required: true,
@@ -20,17 +21,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.fade-enter-active {
-  transition: opacity 1s;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.tag:not(body) {
-  font-size: 0.85em !important;
-}
-</style>

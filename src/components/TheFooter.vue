@@ -1,26 +1,53 @@
 <template>
-  <footer class="footer has-background-white">
-    <div class="container">
-    <div class="content">
-      <p class="title is-6 has-text-grey-dark has-text-weight-semibold">
-        Copyright © {{ new Date().getFullYear() }} Kevin Custer. All rights reserved.
-      </p>
-      <p class="subtitle is-6 has-text-grey-dark">
-        <a href="/rss.xml" class="has-text-primary" aria-label="RSS Feed">
-          RSS
+  <div class="footer">
+    <p class="footer-text">
+      <slot></slot>
+    </p>
+    <p class="footer-links" v-if="footerLinks">
+      <span v-for="footerLink in footerLinks" :key="footerLink.name">
+        <a :href="footerLink.href" class="footer-link" :aria-label="footerLink.name">
+          {{ footerLink.name }}
         </a>
-         | 
-        <a href="/sitemap.xml" class="has-text-primary" aria-label="Sitemap">
-          Sitemap
-        </a>
-      </p>
-    </div>
-    </div>
-  </footer>
+        <span v-if="footerLink != lastFooterLink"> | </span>
+      </span>
+    </p>
+  </div>
 </template>
 
+<script>
+export default {
+  name: 'TheFooter',
+  props: {
+    footerLinks: {
+      required: false,
+      type: Array
+    }
+  },
+  computed: {
+    lastFooterLink() {
+      return this.footerLinks.slice(-1)[0]
+    }
+  }
+}
+</script>
+
+
 <style lang="scss" scoped>
-.title {
-  margin-bottom: 1.8em !important;
+@layer components {
+  .footer {
+    @apply py-10 text-center border-t-2 border-green-500 border-opacity-30;
+
+    .footer-text {
+      @apply mb-2 text-gray-700;
+    }
+
+    .footer-links {
+      @apply text-sm text-gray-600;
+
+      .footer-link {
+        @apply text-primary-700;
+      }
+    }
+  }
 }
 </style>

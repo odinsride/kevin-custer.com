@@ -1,13 +1,15 @@
 <template>
   <Layout>
-    <div class="container is-max-widescreen">
-      <div class="column is-10 is-offset-1">
-        <div class="is-hidden-mobile">
-          <TheCategoryList :filter="filter" v-on:filterPosts="updatePostFilter($event)" />
-        </div>
-        <PostList :filter="filter" />
+
+    <section class="px-2 md:px-6 lg:px-8 py-2 mt-4 lg:mt-8 justify-center lg:flex lg:gap-10">
+      <div class="lg:flex-1 lg:max-w-screen-lg">
+        <ThePostList :filter="filter" />
       </div>
-    </div>
+      <div class="lg:flex-initial max-w-xs text-center lg:text-left">
+        <TheCategoryList :filter="filter" v-on:filterPosts="updatePostFilter($event)" />
+      </div>
+    </section>
+
   </Layout>
 </template>
 
@@ -15,14 +17,14 @@
 import TheHero from '@/components/TheHero'
 import TheAuthor from '@/components/TheAuthor'
 import TheCategoryList from '@/components/TheCategoryList'
-import PostList from '@/components/Posts/PostList'
+import ThePostList from '@/components/ThePostList'
 
 export default {
   components: {
     TheHero,
     TheAuthor,
     TheCategoryList,
-    PostList
+    ThePostList
   },
 
   data () {

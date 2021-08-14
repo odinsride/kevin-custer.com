@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
-    <header class="header">
-      <TheNavBar/>
+  <div id="app" class="flex flex-col min-h-screen">
+    <header>
+      <TheNavBar :menuItems="menuItems"></TheNavBar>
     </header>
-    <main class="site-content">
+
+    <main class="flex-grow h-full">
       <slot />
     </main>
-    <TheFooter />
+
+    <footer>
+      <TheFooter :footerLinks="footerLinks">
+        Copyright © {{ new Date().getFullYear() }} <a :href="$static.metadata.siteUrl" target="_blank" class="font-bold text-green-700 hover:text-green-800" rel="noopener">{{ $static.metadata.siteName }}</a>. All rights reserved.
+      </TheFooter>
+    </footer>
   </div>
 </template>
 
 <static-query>
 query {
   metadata {
-    siteName
+    siteName,
+    siteUrl
   }
 }
 </static-query>
@@ -27,19 +34,48 @@ query {
       TheNavBar,
       TheFooter
     },
+
+    data: () => ({
+      menuItems: [
+        {
+          name: 'Home',
+          href: '/'
+        },
+        {
+          name: 'Blog',
+          href: '/blog'
+        },
+        // {
+        //   name: 'Portfolio',
+        //   href: '/portfolio'
+        // },
+        // {
+        //   name: 'Resume',
+        //   href: '/resume'
+        // },
+        // {
+        //   name: 'Skills',
+        //   href: '#skills',
+        // },
+        {
+          name: 'Photography',
+          href: 'https://photos.kevin-custer.com',
+          target: '_blank',
+        },
+      ],
+      footerLinks: [
+        {
+          name: 'RSS',
+          href: '/rss.xml'
+        },
+        {
+          name: 'Sitemap',
+          href: '/sitemap.xml'
+        }
+      ]
+    }),
   }
 </script>
 
 <style lang="scss">
-// /* Enter and leave animations can use different */
-// /* durations and timing functions.              */
-// .slide-fade-enter-active {
-//   transition: all .5s ease;
-// }
-
-// .slide-fade-enter
-// /* .slide-fade-leave-active below version 2.1.8 */ {
-//   transform: translateY(-50px);
-//   opacity: 0;
-// }
 </style>
