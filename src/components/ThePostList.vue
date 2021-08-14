@@ -6,6 +6,7 @@
     >
       <PostPanel :post="post.node"></PostPanel>
     </div>
+  </div>
 </template>
 
 <static-query>
