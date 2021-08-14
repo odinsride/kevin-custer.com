@@ -6,7 +6,7 @@
         <g-link to="/">
           <g-image alt="Kevin Custer: Full-stack developer" src="~/assets/images/logo.png" width="250" blur="5" quality="100" />
         </g-link>
-        <button class="navbar-menu-button" type="button" v-on:click="toggleNavbar()">
+        <button class="navbar-menu-button" type="button" v-on:click="toggleNavbar()" aria-label="Navigation">
           <font-awesome-icon icon="bars"></font-awesome-icon>
         </button>
       </div>

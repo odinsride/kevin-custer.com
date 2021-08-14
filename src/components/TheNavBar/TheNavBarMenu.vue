@@ -5,6 +5,7 @@
          :href="menuItem.href" 
          :target="menuItem.target" 
          class="menu-item"
+         rel="noopener"
       >
         <span class="mr-2">{{menuItem.name}}</span>
         <font-awesome-icon icon="external-link-alt" size="sm"></font-awesome-icon>

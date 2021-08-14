@@ -78,8 +78,9 @@ export default {
     h2 { @apply text-xl font-bold }
     h3 { @apply text-lg font-semibold }
     h4 { @apply text-base font-semibold }
+    h6 { @apply font-semibold }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4, h6 {
       @apply text-gray-800 mt-6 mb-2
     }
 
@@ -89,7 +90,7 @@ export default {
 
     p, li {
       code {
-        @apply bg-gray-100 rounded px-1.5 py-1 text-green-800 text-opacity-80
+        @apply bg-gray-100 rounded px-1.5 py-1 text-secondary-800 font-bold text-opacity-70
       }
 
       @apply text-gray-700 text-sm md:text-base mb-2 leading-relaxed
@@ -99,12 +100,39 @@ export default {
       @apply list-disc list-outside mx-6 my-4
     }
 
+    ol {
+      @apply list-decimal list-outside mx-6 my-4
+    }
+
     blockquote {
-      @apply px-4 py-2 shadow bg-green-200 bg-opacity-50 border-l-4 border-green-500 border-opacity-60 mb-4
+      @apply px-4 py-2 shadow bg-primary-200 bg-opacity-50 border-l-4 border-primary-500 border-opacity-60 mb-4
     }
 
     pre {
       @apply rounded shadow
+    }
+
+    table {
+      width: 100%;
+      @apply table-auto mb-5
+    }
+
+    table {
+      thead > tr > th {
+        @apply text-left px-2 py-1 bg-secondary-600 text-white bg-opacity-75
+      }
+      
+      tbody > tr > td {
+        @apply px-2 py-1 pr-3
+      }
+
+      td {
+        @apply border-2 border-secondary-100
+      }
+    }
+
+    a {
+      @apply text-primary-600 font-bold
     }
 
   }
