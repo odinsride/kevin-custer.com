@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class="md:px-20 md:py-10">
-      <article class="bg-white md:rounded-xl shadow-lg py-6 px-4 md:py-10 md:px-12 max-w-screen-lg mx-auto">
+    <div class="md:px-20 md:py-10 bg-gray-50">
+      <article class="bg-white md:rounded-xl shadow-sm py-6 px-4 md:py-10 md:px-12 max-w-screen-lg mx-auto">
         <div class="text-center">
           <PostTitle :post="$page.post"/>
           <PostMeta :post="$page.post"/>
@@ -11,6 +11,9 @@
         </div>
         <div class="content mt-4">
           <div v-html="$page.post.content"></div>
+        </div>
+        <div class="content mt-12 pt-6 border-t-4 border-gray-200">
+          <vue-disqus shortname="kevincuster" :identifier="$page.post.title"></vue-disqus>
         </div>
       </article>
     </div>

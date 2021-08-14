@@ -1,60 +1,48 @@
 <template>
-  <section class="section" id="contactForm">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-8 is-offset-2">
+  <div class="flex justify-center sm:py-12" id="contactForm">
+    <div class="w-full max-w-xl">
+      <form name="contact"
+            method="POST"
+            v-on:submit.prevent="handleSubmit"
+            action="/success/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            class="bg-white rounded px-8 pt-6 pb-8 mb-4">
 
-          <h3 class="title is-3 has-text-primary">Connect with me</h3>
-
-          <form name="contact"
-                method="POST"
-                v-on:submit.prevent="handleSubmit"
-                action="/success/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field">
-
-            <input type="hidden" name="form-name" value="contact">
-            <p hidden>
-              <label>
-                Don't fill this out: <input name="bot-field" />
-              </label>
-            </p>
-
-            <div class="sender-info field">
-              <div class="field">
-                <label for="name" class="label has-text-primary">Name</label>
-                <div class="control">
-                  <input class="input" type="text" name="name" v-model="formData.name" placeholder="John Smith">
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="email" class="label has-text-primary">Email</label>
-                <div class="control">
-                  <input class="input" type="email" name="email" v-model="formData.email" placeholder="johnsmith@gmail.com">
-                </div>
-              </div>
-            </div>
-
-            <div class="message-wrapper field">
-              <label for="message" class="label has-text-primary">Message</label>
-              <div class="control">
-                <textarea class="textarea" name="message" v-model="formData.message" placeholder="Leave me a message!"></textarea>
-              </div>
-            </div>
-
-            <div class="field is-grouped">
-              <div class="control">
-                <button type="submit" class="button is-link">Send</button>
-              </div>
-            </div>
-
-          </form>
-
+            
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden>
+          <label>
+            Don't fill this out: <input name="bot-field" />
+          </label>
+        </p>
+        <h3 class="text-2xl font-bold text-primary-600 mb-6">Contact me</h3>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Name
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-secondary-200" id="name" type="text" v-model="formData.name" placeholder="Homer Simpson">
         </div>
-      </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-secondary-200" id="email" type="email" v-model="formData.email" placeholder="homer@simpsons.com">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+            Message
+          </label>
+          <textarea class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring focus:ring-secondary-200" id="message" v-model="formData.message" placeholder="Leave me a message!"></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-secondary-200" type="submit">
+            Send
+          </button>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 @layer components {
   .footer {
-    @apply py-10 text-center bg-gray-50 border-t border-green-500 border-opacity-50;
+    @apply py-10 text-center border-t-2 border-green-500 border-opacity-30;
 
     .footer-text {
       @apply mb-2 text-gray-700;

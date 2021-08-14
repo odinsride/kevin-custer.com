@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 :class="size" class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-xl">{{ post.title }}</h1>
+    <h1 :class="size" class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-2xl">{{ post.title }}</h1>
   </div>
 </template>
 

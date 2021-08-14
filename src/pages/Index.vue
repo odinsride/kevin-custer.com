@@ -13,7 +13,7 @@
           <BaseButton text="Read my blog" secondary url="/blog"></BaseButton>
         </div>
         <div>
-          <BaseButton text="Connect with me" secondary light></BaseButton>
+          <BaseButton text="Connect with me" secondary light url="/contact"></BaseButton>
         </div>
       </template>
     </TheHero>
