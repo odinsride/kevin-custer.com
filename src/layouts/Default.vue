@@ -45,18 +45,18 @@ query {
           name: 'Blog',
           href: '/blog'
         },
-        // {
-        //   name: 'Portfolio',
-        //   href: '/portfolio'
-        // },
-        // {
-        //   name: 'Resume',
-        //   href: '/resume'
-        // },
-        // {
-        //   name: 'Skills',
-        //   href: '#skills',
-        // },
+        {
+          name: 'Portfolio',
+          href: '/portfolio'
+        },
+        {
+          name: 'Resume',
+          href: '/resume'
+        },
+        {
+          name: 'Skills',
+          href: '#skills',
+        },
         {
           name: 'Photography',
           href: 'https://photos.kevin-custer.com',

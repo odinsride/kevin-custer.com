@@ -1,5 +1,5 @@
 <template>
-  <div class="text-xs flex-initial font-bold px-2 py-1 shadow border border-opacity-30 border-green-700 rounded-2xl text-green-800 bg-green-50">
+  <div class="text-xs flex-initial font-bold px-2 py-1 shadow border border-opacity-30 border-green-700 rounded-2xl text-green-800 bg-green-50 mr-1">
     {{ tagText }}
   </div>
 </template>

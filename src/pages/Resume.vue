@@ -1,43 +1,40 @@
 <template>
   <Layout>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-2-widescreen is-3-tablet is-12-mobile is-offset-1-mobile">
-            <ResumeMenu />
-          </div>
-          <div class="column is-8-widescreen is-9-tablet is-12-mobile">
-            <div id="intro" class="resume-title column has-text-centered">
-              <h1 class="title is-5 has-text-primary">{{ title }}</h1>
-            </div>
-            <IntroPanel :intro="intro" />
 
-            <div id="competencies" class="resume-title column has-text-centered">
-              <h1 class="title is-5 has-text-primary">Core Competencies</h1>
-            </div>
-            <CompetencyPanel :competencies="competencies" />
-
-            <div id="techskills" class="resume-title column has-text-centered">
-              <h1 class="title is-5 has-text-primary">Technical Skills</h1>
-            </div>
-            <SkillPanel :skills="skills" />
-
-            <div id="certifications" class="resume-title column has-text-centered">
-              <h1 class="title is-5 has-text-primary">Certifications</h1>
-            </div>
-            <CertPanel :certifications="certifications" />
-
-            <div id="education" class="resume-title column has-text-centered">
-              <h1 class="title is-5 has-text-primary">Education</h1>
-            </div>
-            <EduPanel :education="education" />
-
-            <div id="experience" class="resume-title column has-text-centered">
-              <h1 class="title is-5 has-text-primary">Professional Experience</h1>
-            </div>
-            <JobList />
-          </div>
+    <section class="px-2 md:px-6 lg:px-8 py-2 mt-4 lg:mt-8 justify-center lg:flex lg:gap-10">
+      <div class="lg:flex-1 lg:max-w-screen-lg">
+        <div id="intro" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">{{ title }}</h1>
         </div>
+        <IntroPanel :intro="intro" />
+
+        <div id="competencies" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Core Competencies</h1>
+        </div>
+        <CompetencyPanel :competencies="competencies" />
+
+        <div id="techskills" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Technical Skills</h1>
+        </div>
+        <SkillPanel :skills="skills" />
+
+        <div id="certifications" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Certifications</h1>
+        </div>
+        <CertPanel :certifications="certifications" />
+
+        <div id="education" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Education</h1>
+        </div>
+        <EduPanel :education="education" />
+
+        <div id="experience" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Professional Experience</h1>
+        </div>
+        <JobList />
+      </div>
+      <div class="lg:flex-initial max-w-xs text-center lg:text-left">
+        <ResumeMenu />
       </div>
     </section>
   </Layout>

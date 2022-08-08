@@ -1,26 +1,20 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <div class="columns is-mobile">
-              <div class="column is-6 is-offset-1-desktop">
-                <ul>
-                  <li v-for="comp in competencies.slice(0, this.rows)" :key="comp">
-                    {{ comp }}
-                  </li>
-                </ul>
-              </div>
-              <div class="column is-6">
-                <ul>
-                  <li v-for="comp in competencies.slice(this.rows, competencies.length)" :key="comp">
-                    {{ comp }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="lg:py-0 my-6 lg:flex text-gray-700 lg:leading-relaxed">
+        <div class="flex-auto">
+          <ul class="list-inside list-disc">
+            <li v-for="comp in competencies.slice(0, this.rows)" :key="comp">
+              {{ comp }}
+            </li>
+          </ul>
+        </div>
+        <div class="flex-auto">
+          <ul class="list-inside list-disc">
+            <li v-for="comp in competencies.slice(this.rows, competencies.length)" :key="comp">
+              {{ comp }}
+            </li>
+          </ul>
         </div>
       </div>
     </article>

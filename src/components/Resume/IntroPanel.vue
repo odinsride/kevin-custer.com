@@ -1,12 +1,8 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <p>{{ intro }}</p>
-          </div>
-        </div>
+      <div class="lg:py-0 my-6">
+        <p class="text-gray-700 lg:leading-relaxed">{{ intro }}</p>
       </div>
     </article>
   </transition>

@@ -1,29 +1,52 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h5 class="title is-5">Platforms</h5>
-            <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="plat in skills.platforms" :key="plat">{{plat}}</b-tag></b-taglist>
-          
-            <h5 class="title is-5">Languages</h5>
-            <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="lang in skills.languages" :key="lang">{{lang}}</b-tag></b-taglist>
-          
-            <h5 class="title is-5">Frameworks</h5>
-            <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="framework in skills.frameworks" :key="framework">{{framework}}</b-tag></b-taglist>
-          
-            <h5 class="title is-5">Tools</h5>
-            <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="tool in skills.tools" :key="tool">{{tool}}</b-tag></b-taglist>
+      <div class="lg:py-0 my-6 text-gray-700 lg:leading-relaxed">
+        <div class="ml-4 mb-4">
+          <h5 class="font-semibold mb-2 lg:text-lg">Platforms</h5>
+          <div class="flex items-center">
+            <Tag v-for="tag in skills.platforms" :key="tag" :tagText="tag"/>
           </div>
         </div>
+        <div class="ml-4 mb-4">
+          <h5 class="font-semibold mb-2 lg:text-lg">Languages</h5>
+          <div class="flex items-center">
+            <Tag v-for="tag in skills.languages" :key="tag" :tagText="tag"/>
+          </div>
+        </div>
+        <div class="ml-4 mb-4">
+          <h5 class="font-semibold mb-2 lg:text-lg">Frameworks</h5>
+          <div class="flex items-center">
+            <Tag v-for="tag in skills.frameworks" :key="tag" :tagText="tag"/>
+          </div>
+        </div>
+        <div class="ml-4 mb-4">
+          <h5 class="font-semibold mb-2 lg:text-lg">Tools</h5>
+          <div class="flex items-center">
+            <Tag v-for="tag in skills.tools" :key="tag" :tagText="tag"/>
+          </div>
+        </div>
+        <!-- <h5 class="title is-5">Languages</h5>
+        <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="lang in skills.languages" :key="lang">{{lang}}</b-tag></b-taglist>
+      
+        <h5 class="title is-5">Frameworks</h5>
+        <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="framework in skills.frameworks" :key="framework">{{framework}}</b-tag></b-taglist>
+      
+        <h5 class="title is-5">Tools</h5>
+        <b-taglist><b-tag type="is-link has-text-weight-semibold" size="is-medium" v-for="tool in skills.tools" :key="tool">{{tool}}</b-tag></b-taglist> -->
       </div>
     </article>
   </transition>
 </template>
 
 <script>
+import Tag from '@/components/Tags/Tag.vue'
+
 export default {
+  components: {
+    Tag
+  },
+
   data () {
     return {
       rows: 5
