@@ -4,32 +4,32 @@
     <section class="px-2 md:px-6 lg:px-8 py-2 mt-4 lg:mt-8 justify-center lg:flex lg:gap-10">
       <div class="lg:flex-1 lg:max-w-screen-lg">
         <div id="intro" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">{{ title }}</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">{{ title }}</h1>
         </div>
         <IntroPanel :intro="intro" />
 
         <div id="competencies" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Core Competencies</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Core Competencies</h1>
         </div>
         <CompetencyPanel :competencies="competencies" />
 
         <div id="techskills" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Technical Skills</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Technical Skills</h1>
         </div>
         <SkillPanel :skills="skills" />
 
         <div id="certifications" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Certifications</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Certifications</h1>
         </div>
         <CertPanel :certifications="certifications" />
 
         <div id="education" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Education</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Education</h1>
         </div>
         <EduPanel :education="education" />
 
         <div id="experience" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Professional Experience</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Professional Experience</h1>
         </div>
         <JobList />
       </div>

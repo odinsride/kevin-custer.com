@@ -10,7 +10,7 @@
       </template>
       <template v-slot:cta>
         <div class="mb-4 md:mb-0 md:mr-4">
-          <BaseButton text="Read my blog" secondary url="/blog"></BaseButton>
+          <BaseButton text="Read my blog" primary light url="/blog"></BaseButton>
         </div>
         <div>
           <BaseButton text="Connect with me" secondary light url="/contact"></BaseButton>

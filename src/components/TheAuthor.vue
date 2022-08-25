@@ -111,7 +111,7 @@ export default {
       @apply flex justify-center;
 
       .author-image {
-        @apply rounded-full h-auto align-middle border-secondary-300 border-4 border-opacity-80;
+        @apply rounded-full h-auto align-middle border-primary-100 border-4 border-opacity-80;
         box-shadow: 0px 2px 28px 2px rgba(0,0,0,0.4);
       }
     }
