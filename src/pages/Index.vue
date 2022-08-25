@@ -21,7 +21,7 @@
     <section class="px-2 md:px-6 py-2 mt-4 lg:mt-8 justify-center lg:flex" style="margin-top: -140px">
       <TheAuthor
         name="Kevin Custer"
-        title="Software Engineer"
+        title="ServiceNow Architect & Software Engineer"
         location="Staunton, VA"
         github="odinsride"
         linkedin="kevin-custer-sn"
