@@ -1,18 +1,14 @@
 <template>
-  <div class="content">
-    <div class="level">
-      <div class="level-left">
-        <div class="level-item">
-          <h1 class="is-size-5 is-size-5-mobile title has-text-link">{{ job.company }}</h1>
-        </div>
+  <div class="mb-1">
+    <div class="lg:flex lg:justify-between mb-1">
+      <div class="">
+        <h1 class="lg:text-lg font-semibold">{{ job.title }}</h1>
       </div>
-      <div class="level-right">
-        <div class="level-item">
+      <div class="font-semibold text-sm lg:text-base">
           {{ job.dateStart }} - {{ dateEnd }}
-        </div>
       </div>
     </div>
-    <h2 class="is-size-6 is-size-6-mobile subtitle">{{ job.title }}</h2>
+    <h2 class="font-semibold text-sm lg:text-base">{{ job.company }}</h2>
   </div>
 </template>
 

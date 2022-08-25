@@ -1,14 +1,10 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="card">
-        <div class="card-content">
-          <div class="content has-text-centered">
-            <div class="certification" v-for="cert in certifications" :key="cert.title">
-              <div class="title is-6">{{ cert.title }}</div>
-              <div class="subtitle is-6">{{ cert.date }}</div>
-            </div>
-          </div>
+      <div class="lg:py-0 mb-6">
+        <div class="mb-3" v-for="cert in certifications" :key="cert.title">
+          <div class="font-semibold lg:text-lg">{{ cert.title }}</div>
+          <div class="">{{ cert.date }}</div>
         </div>
       </div>
     </article>
@@ -51,10 +47,6 @@ export default {
 
 .content ul {
   margin-top: 0;
-}
-
-.certification:first-of-type {
-  margin-bottom: 2em;
 }
 
 @media screen and (max-width: 768px) {

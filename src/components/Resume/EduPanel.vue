@@ -1,12 +1,10 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="card">
-        <div class="card-content">
-          <div class="content has-text-centered">
-            <div class="title is-5">{{ education.degree }} ({{ education.year }})</div>
-            <div class="subtitle is-6">{{ education.school }}, {{ education.location }}</div>
-          </div>
+      <div class="lg:py-0 mb-6">
+        <div class="">
+          <div class="font-semibold lg:text-lg">{{ education.degree }} ({{ education.year }})</div>
+          <div class="">{{ education.school }}, {{ education.location }}</div>
         </div>
       </div>
     </article>

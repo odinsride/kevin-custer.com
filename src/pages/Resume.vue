@@ -4,36 +4,36 @@
     <section class="px-2 md:px-6 lg:px-8 py-2 mt-4 lg:mt-8 justify-center lg:flex lg:gap-10">
       <div class="lg:flex-1 lg:max-w-screen-lg">
         <div id="intro" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">{{ title }}</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">{{ title }}</h1>
         </div>
         <IntroPanel :intro="intro" />
 
         <div id="competencies" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Core Competencies</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Core Competencies</h1>
         </div>
         <CompetencyPanel :competencies="competencies" />
 
         <div id="techskills" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Technical Skills</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Technical Skills</h1>
         </div>
         <SkillPanel :skills="skills" />
 
         <div id="certifications" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Certifications</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Certifications</h1>
         </div>
         <CertPanel :certifications="certifications" />
 
         <div id="education" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Education</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Education</h1>
         </div>
         <EduPanel :education="education" />
 
         <div id="experience" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-4 lg:mb-6 lg:text-lg">Professional Experience</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-lg">Professional Experience</h1>
         </div>
         <JobList />
       </div>
-      <div class="lg:flex-initial max-w-xs text-center lg:text-left">
+      <div class="hidden lg:block lg:flex-initial max-w-xs text-center lg:text-left">
         <ResumeMenu />
       </div>
     </section>
@@ -63,16 +63,14 @@ export default {
   data () {
     return {
       title: "About Kevin Custer",
-      intro: "Detail-oriented IT Specialist with experience working on a broad range of corporate IT solutions which \
-              include planning, design, development, testing, and implementation of applications in direct support of \
-              client business objectives",
+      intro: "ServiceNow architect with four years of experience building solutions and guiding clients on the platform, and over 16 years of professional software engineering experience. Key ServiceNow technical strengths include UX, SecOps, ITSM, and CSDM.  Excellent leadership, organization, and communication skills, with 2 years of experience managing and mentoring others.",
       competencies: [
         "Fullstack Development",
         "Solution Architecture",
         "ITIL v4",
         "Incident Management",
-        "Business Intelligence",
-        "Data Warehousing",
+        "Security Operations",
+        "Integrations",
         "Analytics and Reporting",
         "Data Modeling",
         "Documentation",
@@ -80,7 +78,7 @@ export default {
       ],
       skills: {
         platforms: [
-          "Linux (Debian / Arch)",
+          "Linux (Debian / Red Hat)",
           "macOS",
           "Windows"
         ],
@@ -103,15 +101,14 @@ export default {
           "Grails",
           "AngularJS",
           "Bootstrap",
-          "Bulma / Buefy",
-          "Vuetify",
-          "Nuxt",
-          "Vuex",
+          "Tailwind",
           "Gridsome"
         ],
         tools: [
-          "ServiceNow (Quebec)",
-          "Oracle E-Business Suite",
+          "ServiceNow",
+          "Shopify",
+          "Wordpress",
+          "Oracle EBS R12",
           "OBIEE",
           "Oracle BI Publisher",
           "Oracle Application Express",
@@ -131,8 +128,20 @@ export default {
       },
       certifications: [
         {
+          title: "ServiceNow Certified Implementation Specialist - ITSM",
+          date: "April 2022"
+        },
+        {
+          title: "ServiceNow Certified System Administrator",
+          date: "July 2021"
+        },
+        {
           title: "ServiceNow Certified Application Developer",
           date: "October 2019"
+        },
+        {
+          title: "ITIL 4 Foundation",
+          date: "November 2019"
         },
         {
           title: "Oracle PL/SQL Developer Certified Associate",

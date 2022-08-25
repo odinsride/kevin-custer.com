@@ -1,11 +1,9 @@
 ---
-title: "Senior Software Engineer"
+title: "Senior ServiceNow Developer"
 company: "University of Virginia"
 location: "Charlottesville, VA"
 dateStart: 2018-10-01
-dateEnd:
+dateEnd: 2021-06-01
 ---
 
----
-
-Provided development, maintenance, and support for the university’s ServiceNow implementation.  Wrote application code per technical specifications. Familiar with many modules of ServiceNow, including CMDB, Problems, Incidents, Security Incidents, and Service Catalog.  Familiar with many technical aspects of ServiceNow including all forms of scripting, Service Portal, workflow orchestration, ACLs, scheduled jobs, email actions, and general administration of the system.
+Provide architectural guidance, development, maintenance, and support for the university’s ServiceNow implementation.  Guided and mentored other ServiceNow developers on the team in their professional journey. Primary focuses include Service Portal, CMDB, and ITSM processes.

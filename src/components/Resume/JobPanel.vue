@@ -1,12 +1,10 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <JobMeta :job="job" />
-            <p v-html=job.content />
-          </div>
+      <div class="lg:py-0 mb-6">
+        <div class="">
+          <JobMeta :job="job" />
+          <p v-html=job.content></p>
         </div>
       </div>
     </article>

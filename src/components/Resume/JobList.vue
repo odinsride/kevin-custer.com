@@ -1,13 +1,13 @@
 <template>
-  <div class="columns is-multiline">
-    <div
-      v-for="job in $static.jobs.edges"
-      :key="job.node.id"
-      class="column is-12"
-    >
-      <JobPanel :job="job.node"/>
+    <div>
+      <div
+        v-for="job in $static.jobs.edges"
+        :key="job.node.id"
+        class=""
+      >
+        <JobPanel :job="job.node"/>
+      </div>
     </div>
-  </div>
 </template>
 
 <static-query>
