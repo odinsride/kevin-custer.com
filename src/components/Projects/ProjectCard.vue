@@ -91,9 +91,7 @@ export default {
 .kc-card {
   //background-color: transparent;
   //width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
+  @apply flex flex-wrap relative;
   min-height: 300px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
@@ -118,7 +116,6 @@ export default {
     background: -webkit-radial-gradient(center, ellipse cover,  rgb(255,255,255) 0%,rgb(224,242,241) 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center,  rgb(255,255,255) 0%,rgb(224,242,241) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0f2f1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding-bottom: 15px;
     -webkit-transition: all 0.6s cubic-bezier(.5,1,.5,1);
     transition: all 0.6s cubic-bezier(.5,1.3,.5,1.3);
     transform-style: preserve-3d;
@@ -147,6 +144,8 @@ export default {
   .kc-card-front {
     z-index: 10;
     box-shadow: 0px 2px 18px -8px rgba(0,0,0,0.4);
+    // @apply shadow-xl rounded border-2 border-opacity-40 border-primary-600;
+    @apply rounded-lg pb-4;
 
     &:after {
       content: "";
@@ -158,7 +157,9 @@ export default {
 
   .kc-card-img {
     img {
-      box-shadow: 0px 2px 16px -8px rgba(0,0,0,0.4);
+      //box-shadow: 0px 2px 16px -8px rgba(0,0,0,0.4);
+      @apply rounded-t-lg border-b-4 border-primary-700 border-opacity-40;
+      min-height: 292px;
     }
   }
     
@@ -175,17 +176,18 @@ export default {
       font-weight: 600;
       font-size: 1.3em;
       margin-bottom: 5px;
+      @apply text-primary-800;
     }
     .kc-learn-more {
       position: relative;
       min-height: 70px;
 
       a {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  overflow: auto;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        overflow: auto;
       }
     }
   }

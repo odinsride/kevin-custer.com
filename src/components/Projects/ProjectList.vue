@@ -1,7 +1,7 @@
 <template>
-  <section class="section" id="projects">
-      <h1 class="title is-size-4 has-text-primary">My Work</h1>
-      <div class="columns is-multiline">
+  <div>
+      <h1 class="text-primary-700 uppercase font-semibold lg:text-xl mb-4 lg:mb-10">My Work</h1>
+      <div class="md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-10 lg:px-6">
         <div 
           v-for="project in $static.projects.edges" 
           :key="project.node.id"
@@ -10,7 +10,7 @@
           <ProjectCard :project="project"/>
         </div>
       </div>
-  </section>
+  </div>
 </template>
 
 <static-query>

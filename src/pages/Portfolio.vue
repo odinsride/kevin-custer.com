@@ -1,13 +1,7 @@
 <template>
   <Layout>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <ProjectList/>
-          </div>
-        </div>
-      </div>
+    <section class="md:px-20 md:py-10 lg:px-48 bg-gray-50">
+      <ProjectList/>
     </section>
   </Layout>
 </template>
