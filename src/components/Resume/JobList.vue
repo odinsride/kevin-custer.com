@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="lg:px-4">
       <div
         v-for="job in $static.jobs.edges"
         :key="job.node.id"

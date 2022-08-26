@@ -9,10 +9,13 @@
           <a href="/resume">About</a>
         </div>
         <div class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30" role="button">
-          <a href="#competencies">Core Competencies</a>
+          <a href="#experience">Professional Experience</a>
         </div>
         <div class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30" role="button">
-          <a href="#techskills">Technical Skills</a>
+          <a href="#techskills">Technologies</a>
+        </div>
+        <div class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30" role="button">
+          <a href="#competencies">Core Strengths</a>
         </div>
         <div class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30" role="button">
           <a href="#certifications">Certifications</a>
@@ -20,9 +23,7 @@
         <div class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30" role="button">
           <a href="#education">Education</a>
         </div>
-        <div class="text-green-700 text-sm py-1.5 pl-3 border-l-2 border-secondary-300 border-opacity-30" role="button">
-          <a href="#experience">Professional Experience</a>
-        </div>
+
       </div>
     </div>
   </aside>

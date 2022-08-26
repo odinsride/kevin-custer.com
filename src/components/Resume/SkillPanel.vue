@@ -1,27 +1,27 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="lg:py-0 mb-6 text-gray-700 lg:leading-relaxed">
+      <div class="lg:py-0 lg:px-4 mb-6 text-gray-700 lg:leading-relaxed">
         <div class="mb-4">
-          <h5 class="font-semibold mb-2 lg:text-lg">Platforms</h5>
+          <h5 class="font-semibold mb-2">Platforms</h5>
           <div class="flex flex-wrap items-center">
             <Tag v-for="tag in skills.platforms" :key="tag" :tagText="tag"/>
           </div>
         </div>
         <div class="mb-4">
-          <h5 class="font-semibold mb-2 lg:text-lg">Languages</h5>
+          <h5 class="font-semibold mb-2">Languages</h5>
           <div class="flex flex-wrap items-center">
             <Tag v-for="tag in skills.languages" :key="tag" :tagText="tag"/>
           </div>
         </div>
         <div class="mb-4">
-          <h5 class="font-semibold mb-2 lg:text-lg">Frameworks</h5>
+          <h5 class="font-semibold mb-2">Frameworks</h5>
           <div class="flex flex-wrap items-center">
             <Tag v-for="tag in skills.frameworks" :key="tag" :tagText="tag"/>
           </div>
         </div>
         <div class="mb-4">
-          <h5 class="font-semibold mb-2 lg:text-lg">Tools</h5>
+          <h5 class="font-semibold mb-2">Tools</h5>
           <div class="flex flex-wrap items-center">
             <Tag v-for="tag in skills.tools" :key="tag" :tagText="tag"/>
           </div>

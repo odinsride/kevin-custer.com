@@ -1,9 +1,9 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="lg:py-0 mb-6">
+      <div class="lg:py-0 lg:px-4 mb-6">
         <div class="mb-3" v-for="cert in certifications" :key="cert.title">
-          <div class="font-semibold lg:text-lg">{{ cert.title }}</div>
+          <div class="font-semibold">{{ cert.title }}</div>
           <div class="">{{ cert.date }}</div>
         </div>
       </div>

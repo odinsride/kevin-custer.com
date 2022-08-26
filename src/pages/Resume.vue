@@ -1,22 +1,26 @@
 <template>
   <Layout>
-
-    <section class="px-2 md:px-6 lg:px-8 py-2 mt-4 lg:mt-8 justify-center lg:flex lg:gap-10">
+    <section class="px-4 md:px-6 lg:px-8 py-2 mt-4 lg:mt-8 justify-center lg:flex lg:gap-10">
       <div class="lg:flex-1 lg:max-w-screen-lg">
         <div id="intro" class="resume-title">
           <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">{{ title }}</h1>
         </div>
         <IntroPanel :intro="intro" />
 
-        <div id="competencies" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Core Competencies</h1>
+        <div id="experience" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Professional Experience</h1>
         </div>
-        <CompetencyPanel :competencies="competencies" />
+        <JobList />
 
         <div id="techskills" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Technical Skills</h1>
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Technologies</h1>
         </div>
         <SkillPanel :skills="skills" />
+
+        <div id="competencies" class="resume-title">
+          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Core Strengths</h1>
+        </div>
+        <CompetencyPanel :competencies="competencies" />
 
         <div id="certifications" class="resume-title">
           <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Certifications</h1>
@@ -28,10 +32,6 @@
         </div>
         <EduPanel :education="education" />
 
-        <div id="experience" class="resume-title">
-          <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Professional Experience</h1>
-        </div>
-        <JobList />
       </div>
       <div class="hidden lg:block lg:flex-initial max-w-xs text-center lg:text-left">
         <ResumeMenu />
@@ -62,7 +62,7 @@ export default {
 
   data () {
     return {
-      title: "About Kevin Custer",
+      title: "About Me",
       intro: "ServiceNow architect with four years of experience building solutions and guiding clients on the platform, and over 16 years of professional software engineering experience. Key ServiceNow technical strengths include UX, SecOps, ITSM, and CSDM.  Excellent leadership, organization, and communication skills, with 2 years of experience managing and mentoring others.",
       competencies: [
         "Fullstack Development",

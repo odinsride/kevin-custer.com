@@ -6,7 +6,7 @@
         Hi, I'm <span class="border-b-4 border-secondary-300">Kevin</span>
       </template>
       <template v-slot:subtitle>
-        I am a <span class="font-bold">ServiceNow</span> developer, full-stack web developer, and landscape photographer from Virginia.
+        I am a <span class="font-bold">ServiceNow</span> fanatic, full-stack web developer, and landscape photographer from Virginia.
       </template>
       <template v-slot:cta>
         <div class="mb-4 md:mb-0 md:mr-4">

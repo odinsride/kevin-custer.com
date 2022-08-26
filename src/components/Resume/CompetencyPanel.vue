@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="lg:py-0 mb-6 px-4 lg:flex text-gray-700 lg:leading-relaxed">
+      <div class="lg:py-0 mb-6 px-6 lg:flex text-gray-700 lg:leading-relaxed">
         <div class="flex-auto">
           <ul class="list-inside list-disc">
             <li v-for="comp in competencies.slice(0, this.rows)" :key="comp">

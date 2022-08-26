@@ -4,7 +4,7 @@
 
 This is my personal blog, resume, and portfolio.  It is built using [Gridsome](https://gridsome.org/) (a Vue static-site framework), which lets me write content in Markdown and publish articles using Git commits.  I am also using the following neat plugins:
 
-* **buefy** - the CSS framework and component library
+* **Tailwind CSS** - the CSS framework
 * **@gridsome/plugin-sitemap** - generates the sitemap
 * **gridsome-plugin-feed** - generates an RSS feed for syndication
 * **vue-disqus** - enables Disqus commenting system on blog articles

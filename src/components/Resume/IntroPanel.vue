@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="lg:py-0 mb-6">
+      <div class="lg:py-0 mb-6 lg:px-4">
         <p class="text-gray-700 lg:leading-relaxed">{{ intro }}</p>
       </div>
     </article>

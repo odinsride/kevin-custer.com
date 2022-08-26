@@ -1,9 +1,9 @@
 <template>
   <transition name="fade" appear>
     <article>
-      <div class="lg:py-0 mb-6">
+      <div class="lg:py-0 lg:px-4 mb-6">
         <div class="">
-          <div class="font-semibold lg:text-lg">{{ education.degree }} ({{ education.year }})</div>
+          <div class="font-semibold">{{ education.degree }} ({{ education.year }})</div>
           <div class="">{{ education.school }}, {{ education.location }}</div>
         </div>
       </div>
