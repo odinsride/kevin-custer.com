@@ -15,11 +15,7 @@
     <div class="kc-card-back">
       <div class="kc-card-back-header has-background-link">
         <div class="kc-card-back-title has-text-white">
-          <b-icon
-            pack="fa"
-            icon="info-circle"
-            size="is-small">
-          </b-icon>&nbsp;
+          <font-awesome-icon icon="info-circle" size="sm"></font-awesome-icon>&nbsp;
           {{ project.node.title }}
         </div>
       </div>
@@ -31,34 +27,22 @@
           </a>
         </p> -->
       </div>
-      <div class="kc-card-footer has-text-right"
+      <div class="kc-card-footer text-right"
            v-if="project.node.github || project.node.url">
-        <b-tooltip type="is-black" 
-                   label="View on GitHub"
-                   v-if="project.node.github">
-          <a class="button kc-link-button is-link"
-             :href=project.node.github
+        <BaseTooltip text="View on GitHub" v-if="project.node.github">
+          <a class="kc-link-button text-primary-700 hover:text-gray-800"
+             :href="project.node.github"
              target="_blank">
-            <b-icon
-              pack="fab"
-              icon="github"
-              size="is-large">
-            </b-icon>
+            <font-awesome-icon :icon="['fab', 'github']" size="lg"></font-awesome-icon>  
           </a>
-        </b-tooltip>
-        <b-tooltip type="is-black" 
-                   label="View Website"
-                   v-if="project.node.url">
-          <a class="button kc-link-button is-link"
-             :href=project.node.url
+        </BaseTooltip>
+        <BaseTooltip text="View Website" v-if="project.node.url">
+          <a class="kc-link-button text-primary-700 hover:text-gray-800"
+             :href="project.node.url"
              target="_blank">
-            <b-icon
-              pack="fa"
-              icon="globe"
-              size="is-large">
-            </b-icon>
+            <font-awesome-icon icon="globe" size="lg"></font-awesome-icon>  
           </a>
-        </b-tooltip>
+        </BaseTooltip>
       </div>
     </div>
   </div>
@@ -66,6 +50,7 @@
 
 <script>
 import TechList from './TechList'
+import BaseTooltip from '../BaseTooltip'
 
 export default {
   data () {
@@ -76,7 +61,9 @@ export default {
 
   components: {
     TechList,
-  },
+    BaseTooltip,
+    BaseTooltip
+},
 
   props: {
     project: {
@@ -123,6 +110,7 @@ export default {
   }
 
   .kc-card-back {
+    @apply rounded-lg;
     position: absolute;
     width: 100%;
     left: 0;
@@ -193,6 +181,7 @@ export default {
   }
 
   .kc-card-back-header {
+    @apply bg-primary-700 text-white rounded-t-lg;
     margin: 0;
     margin-bottom: 10px;
     min-height: 50px;

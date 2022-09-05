@@ -45,10 +45,10 @@ query {
           name: 'Blog',
           href: '/blog'
         },
-        // {
-        //   name: 'Portfolio',
-        //   href: '/portfolio'
-        // },
+        {
+          name: 'Portfolio',
+          href: '/portfolio'
+        },
         {
           name: 'Resume',
           href: '/resume'

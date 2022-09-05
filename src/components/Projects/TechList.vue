@@ -1,19 +1,19 @@
 <template>
   <div v-if="techs.length > 0">
-    <div class="tech-title has-text-centered has-text-primary">
+    <div class="mb-2 text-center font-semibold text-primary-700">
       Technologies
     </div>
-    <div class="tech-tags-container">
-      <b-taglist class="has-text-centered">
-        <b-tag v-for="tech in techs" :key="tech" class="is-link">
-          {{ tech }}
-        </b-tag>
-      </b-taglist>
+    <div class="p-4 border-2 border-primary-700 border-opacity-30 rounded-lg">
+      <div class="flex flex-wrap items-center">
+        <Tag v-for="tech in techs" :key="tech" :tagText="tech"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Tag from '../Tags/Tag'
+
 export default {
   props: {
     techs: {
@@ -21,14 +21,13 @@ export default {
       type: Array
     }
   },
+  components: {
+    Tag,
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.tech-title {
-  font-weight: 400;
-  margin-bottom: 5px;
-}
 
 .tech-tags-container {
   padding: 8px;

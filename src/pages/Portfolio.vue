@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section class="md:px-20 md:py-10 lg:px-48 bg-gray-50">
+    <section class="px-4 md:px-8 md:py-10 xl:px-48 bg-gray-50">
       <ProjectList/>
     </section>
   </Layout>

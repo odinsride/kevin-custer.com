@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1 class="text-primary-700 uppercase font-semibold lg:text-xl mb-4 lg:mb-10">My Work</h1>
-      <div class="md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-10 lg:px-6">
+      <div class="md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-2 lg:gap-10 lg:px-6 xl:grid-cols-3 xl:gap-10 xl:px-6">
         <div 
           v-for="project in $static.projects.edges" 
           :key="project.node.id"
