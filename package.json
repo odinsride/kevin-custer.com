@@ -24,8 +24,8 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "autoprefixer": "^9",
     "gridsome-plugin-tailwindcss": "^4.1.1",
-    "node-sass": "^6.0.0",
     "postcss": "^7",
+    "sass": "^1.58.0",
     "sass-loader": "^10.1.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
