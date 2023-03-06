@@ -57,17 +57,17 @@ export default {
     TagList
   },
 
-  // metaInfo () {
-  //   return {
-  //     title: this.$page.post.title,
-  //     meta: [
-  //       {
-  //         name: 'description',
-  //         content: this.$page.post.excerpt
-  //       }
-  //     ]
-  //   }
-  // }
+  metaInfo () {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.post.excerpt
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -78,22 +78,27 @@ export default {
     h2 { @apply text-xl font-bold }
     h3 { @apply text-lg font-semibold }
     h4 { @apply text-base font-semibold }
+    h5 { @apply text-base font-semibold italic }
     h6 { @apply font-semibold }
 
-    h1, h2, h3, h4, h6 {
-      @apply text-gray-800 mt-6 mb-2
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-gray-800 mt-6 mb-4
     }
 
     h4 {
       @apply text-gray-800 my-2
     }
 
-    p, li {
+    p {
       code {
         @apply bg-gray-100 rounded px-1.5 py-1 text-secondary-800 font-bold text-opacity-70
       }
 
-      @apply text-gray-700 text-sm md:text-base mb-2 leading-relaxed
+      @apply text-gray-700 text-sm md:text-base mb-4 leading-relaxed
+    }
+
+    li {
+      @apply text-gray-700 text-sm md:text-base mb-1 leading-relaxed
     }
 
     ul {
