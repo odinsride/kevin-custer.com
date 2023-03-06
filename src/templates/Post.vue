@@ -98,6 +98,14 @@ export default {
     }
 
     li {
+      p {
+        @apply mb-0
+      }
+
+      ul, ol {
+        @apply my-0
+      }
+      
       @apply text-gray-700 text-sm md:text-base mb-1 leading-relaxed
     }
 
