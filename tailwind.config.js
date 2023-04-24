@@ -27,7 +27,7 @@ module.exports = {
     extend: {
     },
     fontFamily: {
-      sans: ['Mulish', 'sans-serif']
+      sans: ['Roboto', 'Inter', 'Open Sans', 'Mulish', 'sans-serif']
     }
   },
   variants: {

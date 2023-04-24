@@ -1,5 +1,8 @@
 // Mulish Font
 import '@fontsource/mulish'
+import '@fontsource/open-sans'
+import '@fontsource/inter'
+import '@fontsource/roboto'
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'

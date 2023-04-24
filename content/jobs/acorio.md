@@ -1,6 +1,6 @@
 ---
 title: "Technical Architect / Consulting Manager"
-company: "Acorio"
+company: "NTT Data (Formerly Acorio)"
 location: "Boston, MA"
 dateStart: 2021-06-01
 dateEnd:

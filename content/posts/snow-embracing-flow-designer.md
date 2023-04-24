@@ -23,11 +23,11 @@ For those who are completely unfamiliar with Flow Designer, I will refer you to 
 ###### Table of Contents
 - [Introduction](#introduction)
 - [Benefits of Flow Designer](#benefits-of-flow-designer)
-  - [Maintainability](#maintainability)
-      - [Example](#example)
-  - [Speed of Delivery](#speed-of-delivery)
-      - [Example: Integrations](#example-integrations)
-  - [Reusability](#reusability)
+	- [Maintainability](#maintainability)
+			- [Example](#example)
+	- [Speed of Delivery](#speed-of-delivery)
+			- [Example: Integrations](#example-integrations)
+	- [Reusability](#reusability)
 - [Closing Thoughts](#closing-thoughts)
 # Benefits of Flow Designer
 
@@ -143,4 +143,4 @@ How many times have you built a Business Rule for one table, and realized you ne
 
 # Closing Thoughts
 
-In closing, Flow Designer is a powerful tool that offers a wide range of benefits to ServiceNow developers and organizations. By leveraging its drag-and-drop interface, developers can build solutions quickly and easily, improving agility and reducing delivery times. The ability to create reusable components promotes consistency and standardization, making it easier to maintain and update solutions over time. However, it is important to use Flow Designer wisely, and to be aware of its limitations and potential pitfalls, which is a topic I will cover in a future post. With the right approach, Flow Designer can be an invaluable tool for delivering business value and satisfying customers and stakeholders. As developers, we should embrace this amazing tool and see its near-endless uses.
+In conclusion, Flow Designer presents itself as a robust tool that offers numerous advantages to ServiceNow developers and organizations alike. Through its intuitive drag-and-drop interface, developers can expedite the development of solutions, improving their agility and reducing delivery times. Moreover, the creation of reusable components fosters consistency and standardization, which simplifies the maintenance and updating of solutions over time. Nonetheless, it is crucial to employ Flow Designer judiciously and to recognize its limitations and potential risks, which will be discussed in a future post. By adopting the appropriate approach, Flow Designer can serve as an invaluable resource for delivering business value, satisfying customers and stakeholders. As developers, we should embrace this exceptional tool and explore its almost boundless possibilities.

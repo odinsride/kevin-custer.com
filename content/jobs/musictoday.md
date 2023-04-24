@@ -1,6 +1,6 @@
 ---
 title: "Software Engineer"
-company: "Musictoday"
+company: "Musictoday (Part-time)"
 location: "Crozet, VA"
 dateStart: 2019-06-01
 dateEnd: 2022-08-01
