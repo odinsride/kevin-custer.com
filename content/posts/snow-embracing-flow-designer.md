@@ -1,6 +1,6 @@
 ---
 title: "Embracing Flow Designer"
-date: 2023-03-05
+date: 2023-04-24
 tags: ['ServiceNow']
 author: Kevin Custer
 publish: yes
