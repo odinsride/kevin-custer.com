@@ -20,15 +20,16 @@ As an employee of a ServiceNow partner, I have a vested interest in client satis
 
 For those who are completely unfamiliar with Flow Designer, I will refer you to the [docs](https://docs.servicenow.com/bundle/utah-build-workflows/page/administer/flow-designer/concept/flow-designer.html) so that you can get a better understanding of the topics to follow.
 
-###### Table of Contents
-- [Introduction](#introduction)
-- [Benefits of Flow Designer](#benefits-of-flow-designer)
-	- [Maintainability](#maintainability)
-			- [Example](#example)
-	- [Speed of Delivery](#speed-of-delivery)
-			- [Example: Integrations](#example-integrations)
-	- [Reusability](#reusability)
-- [Closing Thoughts](#closing-thoughts)
+* [Introduction](#introduction)
+* [Benefits of Flow Designer](#benefits-of-flow-designer)
+  * [Maintainability](#maintainability)
+  * [Speed of Delivery](#speed-of-delivery)
+  * [Reusability](#reusability)
+* [Closing Thoughts](#closing-thoughts)
+
+
+
+
 # Benefits of Flow Designer
 
 ## Maintainability
