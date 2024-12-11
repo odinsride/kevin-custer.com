@@ -1,9 +1,9 @@
 ---
-title: "Technical Architect / Consulting Manager"
-company: "NTT Data (Formerly Acorio)"
-location: "Boston, MA"
+title: 'Senior Manager of Technical Consulting'
+company: 'NTT Data (Formerly Acorio)'
+location: 'Boston, MA'
 dateStart: 2021-06-01
-dateEnd:
+dateEnd: 2024-11-08
 ---
 
-Guiding clients to produce organizational value from their ServiceNow implementations, with a focus on Service Portal / UX, and SecOps – SIR, VR, and SOAR.  Additionally, managed a group of 4-5 other consultants – responsibilities include: mentoring / enablement, quarterly performance evaluations, and project staffing support.
+Served as a Technical Architect and head of Technical Consulting for NTT DATA’s ServiceNow Practice, leading multiple successful implementation projects across SecOps (SIR, VR, SOAR), ITSM, integrations, and Service Portal. Managed Consulting Managers and Architects, provided mentoring, supported project staffing, resolved escalations, and delivered operational support while contributing to sales and presales from a technical delivery perspective. Led efforts to define success metrics and establish standards for architects, ensuring consistent project leadership. Additionally, served as integrations service lead, developing enablement content and coaching consultants on best practices in integrations.

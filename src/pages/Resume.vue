@@ -31,7 +31,6 @@
           <h1 class="text-green-700 font-semibold mb-2 lg:mb-3 lg:text-xl">Education</h1>
         </div>
         <EduPanel :education="education" />
-
       </div>
       <div class="hidden lg:block lg:flex-initial max-w-xs text-center lg:text-left">
         <ResumeMenu />
@@ -41,13 +40,13 @@
 </template>
 
 <script>
-import ResumeMenu from '@/components/Resume/ResumeMenu'
-import IntroPanel from '@/components/Resume/IntroPanel'
-import CompetencyPanel from '@/components/Resume/CompetencyPanel'
-import SkillPanel from '@/components/Resume/SkillPanel'
-import CertPanel from '@/components/Resume/CertPanel'
-import EduPanel from '@/components/Resume/EduPanel'
-import JobList from '@/components/Resume/JobList'
+import ResumeMenu from '@/components/Resume/ResumeMenu';
+import IntroPanel from '@/components/Resume/IntroPanel';
+import CompetencyPanel from '@/components/Resume/CompetencyPanel';
+import SkillPanel from '@/components/Resume/SkillPanel';
+import CertPanel from '@/components/Resume/CertPanel';
+import EduPanel from '@/components/Resume/EduPanel';
+import JobList from '@/components/Resume/JobList';
 
 export default {
   components: {
@@ -57,98 +56,87 @@ export default {
     SkillPanel,
     CertPanel,
     EduPanel,
-    JobList
+    JobList,
   },
 
-  data () {
+  data() {
     return {
-      title: "About Me",
-      intro: "ServiceNow architect with four years of experience building solutions and guiding clients on the platform, and over 16 years of professional software engineering experience. Key ServiceNow technical strengths include UX, SecOps, ITSM, and CSDM.  Excellent leadership, organization, and communication skills, with 2 years of experience managing and mentoring others.",
+      title: 'About Me',
+      intro:
+        'ServiceNow architect with seven years of experience building solutions and guiding clients on the platform, and over 19 years of professional software engineering experience. Key ServiceNow technical strengths include UX, SecOps, ITSM, and CSDM.  Excellent leadership, organization, and communication skills, with 3 years of experience managing and mentoring others.',
       competencies: [
-        "Fullstack Development",
-        "Solution Architecture",
-        "ITIL v4",
-        "Incident Management",
-        "Security Operations",
-        "Integrations",
-        "Analytics and Reporting",
-        "Data Modeling",
-        "Documentation",
-        "Configuration Management"
+        'Fullstack Development',
+        'Solution Architecture',
+        'ITIL v4',
+        'Incident Management',
+        'Security Operations',
+        'Integrations',
+        'Analytics and Reporting',
+        'Data Modeling',
+        'Documentation',
+        'Configuration Management',
       ],
       skills: {
-        platforms: [
-          "Linux (Debian / Red Hat)",
-          "macOS",
-          "Windows"
-        ],
-        languages: [
-          "JavaScript",
-          "Ruby",
-          "HTML",
-          "CSS/SCSS",
-          "SQL",
-          "PL/SQL",
-          "GraphQL",
-          "C#",
-          "Java",
-          "Groovy",
-          "Bash"
-        ],
-        frameworks: [
-          "Vue",
-          "Ruby on Rails",
-          "Grails",
-          "AngularJS",
-          "Bootstrap",
-          "Tailwind",
-          "Gridsome"
-        ],
+        platforms: ['Linux (Debian / Red Hat)', 'macOS', 'Windows'],
+        languages: ['JavaScript', 'Ruby', 'HTML', 'CSS/SCSS', 'SQL', 'PL/SQL', 'GraphQL', 'C#', 'Java', 'Groovy', 'Bash'],
+        frameworks: ['Vue', 'Ruby on Rails', 'Grails', 'AngularJS', 'Bootstrap', 'Tailwind', 'Gridsome'],
         tools: [
-          "ServiceNow",
-          "Shopify",
-          "Wordpress",
-          "Oracle EBS R12",
-          "OBIEE",
-          "Oracle BI Publisher",
-          "Oracle Application Express",
-          "Git",
-          "VS Code",
-          "Visual Studio",
-          "VMware",
-          "IntelliJ IDEA"
-        ]
+          'ServiceNow',
+          'Shopify',
+          'Wordpress',
+          'Oracle EBS R12',
+          'OBIEE',
+          'Oracle BI Publisher',
+          'Oracle Application Express',
+          'Git',
+          'VS Code',
+          'Visual Studio',
+          'VMware',
+          'IntelliJ IDEA',
+        ],
       },
       education: {
-        degree: "B.S., Business Information Technology",
-        year: "2004",
-        concentration: "E-Business Technology",
-        school: "Virginia Polytechnic Institute and State University",
-        location: "Blacksburg, VA"
+        degree: 'B.S., Business Information Technology',
+        year: '2004',
+        concentration: 'E-Business Technology',
+        school: 'Virginia Polytechnic Institute and State University',
+        location: 'Blacksburg, VA',
       },
       certifications: [
         {
-          title: "ServiceNow Certified Implementation Specialist - ITSM",
-          date: "April 2022"
+          title: 'ServiceNow Certified Technical Architect (CTA)',
+          date: 'September 2024',
         },
         {
-          title: "ServiceNow Certified System Administrator",
-          date: "July 2021"
+          title: 'ServiceNow Certified Implementation Specialist - VR',
+          date: 'June 2023',
         },
         {
-          title: "ServiceNow Certified Application Developer",
-          date: "October 2019"
+          title: 'ServiceNow Certified Implementation Specialist - SIR',
+          date: 'December 2022',
         },
         {
-          title: "ITIL 4 Foundation",
-          date: "November 2019"
+          title: 'ServiceNow Certified Implementation Specialist - ITSM',
+          date: 'April 2022',
         },
         {
-          title: "Oracle PL/SQL Developer Certified Associate",
-          date: "February 2009"
-        }
-      ]
-    }
+          title: 'ServiceNow Certified System Administrator',
+          date: 'July 2021',
+        },
+        {
+          title: 'ServiceNow Certified Application Developer',
+          date: 'October 2019',
+        },
+        {
+          title: 'ITIL 4 Foundation',
+          date: 'November 2019',
+        },
+        {
+          title: 'Oracle PL/SQL Developer Certified Associate',
+          date: 'February 2009',
+        },
+      ],
+    };
   },
 
   metaInfo: {
@@ -156,13 +144,14 @@ export default {
     meta: [
       {
         name: 'description',
-        content: 'Kevin Custer is a software engineer with over 15 years real world experience, \
+        content:
+          'Kevin Custer is a software engineer with over 15 years real world experience, \
                   who writes about ServiceNow and other technologies including Ruby on Rails, Vue.js, \
-                  Linux, open-source software, and more.'
-      }
-    ]
-  }
-}
+                  Linux, open-source software, and more.',
+      },
+    ],
+  },
+};
 </script>
 
 <style lang="scss">

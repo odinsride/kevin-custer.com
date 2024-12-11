@@ -1,6 +1,5 @@
 <template>
   <Layout>
-
     <TheHero>
       <template v-slot:title>
         Hi, I'm <span class="border-b-4 border-secondary-300">Kevin</span>
@@ -28,20 +27,19 @@
         twitter="kevincuster_"
       ></TheAuthor>
     </section>
-
   </Layout>
 </template>
 
 <script>
-import TheHero from '@/components/TheHero'
-import TheAuthor from '@/components/TheAuthor'
-import BaseButton from '@/components/BaseButton'
+import TheHero from '@/components/TheHero';
+import TheAuthor from '@/components/TheAuthor';
+import BaseButton from '@/components/BaseButton';
 
 export default {
   components: {
     TheHero,
     TheAuthor,
-    BaseButton
+    BaseButton,
   },
 
   metaInfo: {
@@ -49,15 +47,14 @@ export default {
     meta: [
       {
         name: 'description',
-        content: 'Kevin Custer is a software engineer with over 16 years real world experience, \
+        content:
+          'Kevin Custer is a software engineer with over 16 years real world experience, \
                   who writes about ServiceNow and other technologies including ServiceNow, Ruby on Rails, Vue.js, \
-                  Linux, open-source software, and more.'
-      }
-    ]
-  }
-}
+                  Linux, open-source software, and more.',
+      },
+    ],
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
